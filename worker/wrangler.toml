@@ -1,0 +1,23 @@
+name = "bsx-trainer-sync"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Periodic sync — every 6 hours. Plenty for one athlete (ADR 0006).
+[triggers]
+crons = ["0 */6 * * *"]
+
+# KV for the refresh token and the synced activities.json.
+# Create with:  wrangler kv namespace create BSX_KV
+# then paste the returned id below.
+[[kv_namespaces]]
+binding = "BSX_KV"
+id = "REPLACE_WITH_KV_ID"
+
+[vars]
+# Set to your deployed callback URL after first deploy.
+REDIRECT_URI = "https://bsx-trainer-sync.<your-subdomain>.workers.dev/auth/callback"
+DAYS = "180"
+
+# Secrets (NOT here — set via wrangler, they are never committed):
+#   wrangler secret put STRAVA_CLIENT_ID
+#   wrangler secret put STRAVA_CLIENT_SECRET

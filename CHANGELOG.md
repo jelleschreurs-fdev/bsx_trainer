@@ -18,6 +18,11 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
 - `public/activities.json`: echte seed-data (Strava Relative Effort, mei–sep 2026).
 - `scripts/pull-strava.mjs`: pull-script om de data lokaal te verversen.
 
+- **v1-sync**: Cloudflare Worker (`worker/`) met OAuth-flow, KV-tokenopslag, cron-sync
+  elke 6u en `GET /api/activities`; unit-test voor de sync-mapping. ADR 0006.
+- `config.app.dataUrl`: PWA haalt live data van de Worker met terugval op de seed.
+
 ### Changed
 - Load-bron voor v0 = Strava Relative Effort i.p.v. zelf-berekende Edwards-TRIMP.
   ADR 0002 geamendeerd door ADR 0005; PMC-wiskunde ongewijzigd.
+- "Vandaag" gebruikt de echte lokale datum i.p.v. een vaste seed-datum.

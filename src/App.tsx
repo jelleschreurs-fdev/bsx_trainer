@@ -6,15 +6,24 @@ import { duration, shortDate } from "./lib/format";
 import { Trend } from "./components/Trend";
 import { app } from "./config";
 
-const TODAY = "2026-09-09"; // v0: fixed "today" of the seed. Pull-script updates data.
+// Local (not UTC) ISO date for "today", so rest days up to now decay fatigue correctly.
+function todayIso(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+const TODAY = todayIso();
 
 export default function App() {
   const [file, setFile] = useState<ActivityFile | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}activities.json`)
+    const local = `${import.meta.env.BASE_URL}activities.json`;
+    const primary = app.dataUrl || local;
+    // Try the live Worker endpoint first; fall back to the bundled seed.
+    fetch(primary)
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .catch(() => fetch(local).then((r) => r.json()))
       .then(setFile)
       .catch((e) => setError(String(e)));
   }, []);

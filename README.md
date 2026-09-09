@@ -66,6 +66,31 @@ STRAVA_CLIENT_SECRET=…
 STRAVA_REFRESH_TOKEN=…
 ```
 
+### Live auto-sync (v1 — Cloudflare Worker)
+
+`worker/` bevat een Cloudflare Worker die je Strava-data elke 6 uur synct naar KV en
+serveert op `/api/activities` (ADR 0006). De PWA gebruikt die zodra je
+`config.app.dataUrl` invult; tot dan valt hij terug op de seed.
+
+**Wat jij moet doen (ik kan dit niet voor je aanmaken):**
+
+1. **Strava API-app** aanmaken op https://www.strava.com/settings/api → noteer
+   `Client ID` en `Client Secret`.
+2. **Deploy de Worker:**
+   ```bash
+   cd worker
+   npx wrangler kv namespace create BSX_KV   # plak de id in wrangler.toml
+   npx wrangler secret put STRAVA_CLIENT_ID
+   npx wrangler secret put STRAVA_CLIENT_SECRET
+   npx wrangler deploy
+   ```
+3. Zet in `wrangler.toml` de `REDIRECT_URI` op je Worker-URL + `/auth/callback`, en
+   zet diezelfde callback-domein als "Authorization Callback Domain" in de Strava-app.
+4. Open eenmalig `https://<worker>/auth/login` om te verbinden — dat doet de eerste sync.
+5. Zet `config.app.dataUrl` op `https://<worker>/api/activities` en herbouw de PWA.
+
+Handmatig syncen kan met `POST /sync`. Unit-test van de sync-mapping: `node worker/test/strava.test.mjs`.
+
 ### Op je gsm
 
 De app is een PWA (`manifest.webmanifest` + service worker). Host `dist/` ergens
