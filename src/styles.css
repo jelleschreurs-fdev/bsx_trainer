@@ -38,8 +38,8 @@ body { margin: 0; background: var(--bg); color: var(--text);
 .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em;
   color: var(--muted); margin: 0 0 10px; font-weight: 600; }
 
-.readiness { display: grid; grid-template-columns: auto 1fr auto; gap: 14px;
-  align-items: center; border-left-width: 4px; }
+.readiness { border-left-width: 4px; }
+.readiness-row { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; }
 .readiness .dot { width: 14px; height: 14px; border-radius: 50%; }
 .readiness .level { font-size: 22px; font-weight: 700; margin: 0; }
 .readiness .advice { margin: 2px 0 0; font-size: 14px; }
@@ -50,9 +50,28 @@ body { margin: 0; background: var(--bg); color: var(--text);
 .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
 .metric { background: var(--card); border: 1px solid var(--border); border-radius: 12px;
   padding: 12px; display: flex; flex-direction: column; gap: 2px; }
-.m-val { font-size: 22px; font-weight: 700; }
+.m-val { font-size: 22px; font-weight: 700; display: flex; align-items: baseline; gap: 5px; }
+.m-delta { font-size: 12px; font-weight: 600; color: var(--muted); }
+.m-delta.up { color: #16a34a; }
+.m-delta.down { color: #dc2626; }
 .m-label { font-size: 13px; }
 .m-hint { font-size: 11px; }
+
+/* TSB zone scale */
+.scale { margin-top: 14px; }
+.scale-bar { position: relative; display: flex; height: 8px; border-radius: 5px; overflow: hidden; }
+.scale-seg { display: block; height: 100%; opacity: .75; }
+.scale-marker { position: absolute; top: -3px; width: 3px; height: 14px; border-radius: 2px;
+  background: var(--text); transform: translateX(-50%); box-shadow: 0 0 0 2px var(--card); }
+.scale-ticks { display: flex; justify-content: space-between; margin-top: 4px;
+  font-size: 10px; color: var(--muted); }
+
+/* Glossary */
+.glossary summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--muted); }
+.glossary dl { margin: 12px 0 0; }
+.glossary dt { font-weight: 600; font-size: 13px; margin-top: 10px; }
+.glossary dd { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
+.glossary dt:first-child { margin-top: 0; }
 
 .trend svg { width: 100%; height: auto; display: block; }
 .trend .axis { stroke: var(--border); stroke-width: 1; }
