@@ -34,3 +34,5 @@ vul in, en link 'm vanuit `README.md`/`CHANGELOG.md` waar relevant.
 | [0003](0003-whatsapp-geen-autosync.md) | WhatsApp: geen auto-sync, paste-to-parse | Aanvaard |
 | [0004](0004-serverless-backend-voor-strava-secret.md) | Serverless backend voor Strava-secret | Aanvaard |
 | [0005](0005-relative-effort-als-v0-loadbron.md) | Relative Effort als v0 load-bron | Aanvaard (amendeert 0002) |
+| [0006](0006-cloudflare-workers-als-platform.md) | Cloudflare Workers als platform | Aanvaard (concretiseert 0004) |
+| [0007](0007-agenda-via-template-link.md) | Agenda via template-link, geen API | Aanvaard (concretiseert 0003) |

@@ -23,6 +23,10 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
 - `config.app.dataUrl`: PWA haalt live data van de Worker met terugval op de seed.
 - **Uitleg-laag**: TSB-zoneschaal met marker op de readiness-kaart, richtingspijlen
   (Δ28d/Δ7d) op Fitness/Vermoeidheid, en een uitklapbare "wat betekenen deze cijfers?".
+- **v2-plannen**: tweede scherm "Plannen" met tabbalk. Plak een WhatsApp-bericht →
+  rule-based parser (`src/lib/parseRide.ts`) haalt datum/tijd/plaats/afstand eruit →
+  bewerkbaar → "Zet in Google Agenda" (template-link) of `.ics`-download. ADR 0007.
+  Parser + agenda-link unit-getest (`npm test`).
 
 ### Changed
 - Load-bron voor v0 = Strava Relative Effort i.p.v. zelf-berekende Edwards-TRIMP.

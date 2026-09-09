@@ -26,7 +26,7 @@ In ontwikkeling — **v0** (Strava-pull + readiness/trend als statische PWA).
 | Client | React PWA (statisch) | idem, live sync |
 | Backend | geen (laptop-script) | serverless (Strava-secret, webhook) — [ADR 0004](docs/decisions/0004-serverless-backend-voor-strava-secret.md) |
 | Load-model | Edwards zone-TRIMP op HR — [ADR 0002](docs/decisions/0002-edwards-zone-trimp.md) | + vermogen (TSS) |
-| Agenda/ritten | — | WhatsApp paste→parse → Google Calendar — [ADR 0003](docs/decisions/0003-whatsapp-geen-autosync.md) |
+| Agenda/ritten | WhatsApp paste→parse → Google Calendar template-link ([ADR 0003](docs/decisions/0003-whatsapp-geen-autosync.md), [0007](docs/decisions/0007-agenda-via-template-link.md)) | + evt. Calendar API |
 
 ## Roadmap
 

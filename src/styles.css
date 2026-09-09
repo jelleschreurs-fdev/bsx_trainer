@@ -25,7 +25,7 @@
 body { margin: 0; background: var(--bg); color: var(--text);
   font: 15px/1.4 -apple-system, system-ui, "Segoe UI", Roboto, sans-serif; }
 
-.wrap { max-width: 480px; margin: 0 auto; padding: 16px 16px 32px; }
+.wrap { max-width: 480px; margin: 0 auto; padding: 16px 16px 88px; }
 .muted { color: var(--muted); }
 .err { color: #dc2626; }
 
@@ -87,3 +87,30 @@ body { margin: 0; background: var(--bg); color: var(--text);
 
 .last .name { font-weight: 600; margin: 0 0 2px; }
 .foot { font-size: 12px; margin-top: 18px; text-align: center; }
+
+/* Tab bar */
+.tabbar { position: fixed; bottom: 0; left: 0; right: 0; display: flex;
+  background: var(--card); border-top: 1px solid var(--border);
+  padding-bottom: env(safe-area-inset-bottom); }
+.tabbar button { flex: 1; background: none; border: none; color: var(--muted);
+  font: inherit; font-size: 12px; padding: 10px 0 12px; display: flex; flex-direction: column;
+  align-items: center; gap: 3px; cursor: pointer; }
+.tabbar button.active { color: var(--text); }
+.tabbar .ico { font-size: 20px; line-height: 1; filter: grayscale(1); opacity: .6; }
+.tabbar button.active .ico { filter: none; opacity: 1; }
+
+/* Plan form */
+.paste { width: 100%; resize: vertical; border: 1px solid var(--border); border-radius: 10px;
+  background: var(--bg); color: var(--text); padding: 10px; font: inherit; }
+.field { display: flex; flex-direction: column; gap: 4px; margin-top: 10px; flex: 1; }
+.field label { font-size: 12px; color: var(--muted); }
+.field input { border: 1px solid var(--border); border-radius: 10px; background: var(--bg);
+  color: var(--text); padding: 9px 10px; font: inherit; }
+.row { display: flex; gap: 10px; margin-top: 12px; align-items: flex-end; }
+.preview { margin: 12px 0 0; font-size: 13px; }
+.btn { flex: 1; text-align: center; border: 1px solid var(--border); border-radius: 10px;
+  padding: 11px 12px; font: inherit; font-weight: 600; cursor: pointer; text-decoration: none;
+  color: var(--text); background: var(--card); }
+.btn.primary { background: var(--ctl); border-color: var(--ctl); color: #fff; }
+.btn.ghost { background: none; }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
