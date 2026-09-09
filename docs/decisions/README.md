@@ -36,3 +36,4 @@ vul in, en link 'm vanuit `README.md`/`CHANGELOG.md` waar relevant.
 | [0005](0005-relative-effort-als-v0-loadbron.md) | Relative Effort als v0 load-bron | Aanvaard (amendeert 0002) |
 | [0006](0006-cloudflare-workers-als-platform.md) | Cloudflare Workers als platform | Aanvaard (concretiseert 0004) |
 | [0007](0007-agenda-via-template-link.md) | Agenda via template-link, geen API | Aanvaard (concretiseert 0003) |
+| [0008](0008-ui-richting-en-visuele-identiteit.md) | UI-richting + visuele identiteit (v2) | Aanvaard |

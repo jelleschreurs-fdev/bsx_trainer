@@ -1,113 +1,77 @@
-import { useState } from "react";
-import { parseRide, type ParsedRide } from "../lib/parseRide";
-import { googleCalendarUrl, icsFor } from "../lib/calendar";
+import { useEffect, useMemo, useState } from "react";
+import { parseRide } from "../lib/parseRide";
+import { googleCalendarUrl, endTime } from "../lib/calendar";
 import { shortDate } from "../lib/format";
 
 const EXAMPLE = "Zondag 9u verzamelen aan de kerk van Kermt, 90km";
 
 export function Plan() {
   const [text, setText] = useState("");
-  const [ride, setRide] = useState<ParsedRide | null>(null);
-  const [failed, setFailed] = useState(false);
+  const [titleEdit, setTitleEdit] = useState<string | null>(null);
 
-  function handleParse() {
-    const r = parseRide(text);
-    setRide(r);
-    setFailed(!r);
-  }
+  const base = useMemo(() => (text.trim() ? parseRide(text) : null), [text]);
+  useEffect(() => setTitleEdit(null), [text]); // text is the source of truth
 
-  function set<K extends keyof ParsedRide>(key: K, value: ParsedRide[K]) {
-    setRide((r) => (r ? { ...r, [key]: value } : r));
-  }
-
-  function downloadIcs() {
-    if (!ride) return;
-    const blob = new Blob([icsFor(ride)], { type: "text/calendar" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "rit.ics";
-    a.click();
-    URL.revokeObjectURL(url);
-  }
+  const ride = base ? { ...base, title: titleEdit ?? base.title } : null;
 
   return (
     <>
-      <header className="top">
-        <h1>Plannen</h1>
-      </header>
+      <header className="top"><h1>Plannen</h1></header>
 
-      <section className="card">
-        <h2>Plak het groepsbericht</h2>
+      <section className="card block">
+        <p className="lbl">Plak het groepsbericht</p>
         <textarea
           className="paste"
-          rows={3}
+          rows={2}
           placeholder={EXAMPLE}
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <div className="row">
-          <button className="btn primary" onClick={handleParse} disabled={!text.trim()}>
-            Verwerk
-          </button>
-          <button className="btn ghost" onClick={() => setText(EXAMPLE)}>Voorbeeld</button>
-        </div>
-        {failed && <p className="err">Geen datum gevonden. Voeg bv. een weekdag of datum toe.</p>}
+        {!text.trim() && (
+          <button className="linkbtn" onClick={() => setText(EXAMPLE)}>Voorbeeld invullen</button>
+        )}
+        {text.trim() && !base && (
+          <p className="err sub">Geen datum gevonden — voeg een weekdag of datum toe.</p>
+        )}
       </section>
 
       {ride && (
-        <section className="card plan-result">
-          <div className="readiness-row">
-            <div className="dot" aria-hidden />
-            <div>
-              <p className="level">{shortDate(ride.date)} · {ride.time}</p>
-              <p className="advice">{ride.title}{ride.location ? ` · ${ride.location}` : ""} · {ride.durationMin} min</p>
+        <>
+          <p className="lbl section">Je rit</p>
+          <section className="card ride" style={{ borderLeftColor: "#BFCDE0" }}>
+            <div className="ride-row">
+              <div className="chip">
+                <b>{ride.date.slice(8)}</b>
+                <s>{monthAbbr(ride.date)}</s>
+              </div>
+              <div className="ride-body">
+                <input
+                  className="title-in"
+                  value={ride.title}
+                  onChange={(e) => setTitleEdit(e.target.value)}
+                  aria-label="Titel van de rit"
+                />
+                <p className="muted sub">
+                  {shortDate(ride.date)} · {ride.time}–{endTime(ride.time, ride.durationMin)}
+                  {ride.location ? ` · ${ride.location}` : ""}
+                </p>
+              </div>
             </div>
-          </div>
+          </section>
 
-          <details className="edit">
-            <summary>Controleer & pas aan</summary>
-          <div className="field">
-            <label>Titel</label>
-            <input value={ride.title} onChange={(e) => set("title", e.target.value)} />
-          </div>
-          <div className="row">
-            <div className="field">
-              <label>Datum</label>
-              <input type="date" value={ride.date} onChange={(e) => set("date", e.target.value)} />
-            </div>
-            <div className="field">
-              <label>Tijd</label>
-              <input type="time" value={ride.time} onChange={(e) => set("time", e.target.value)} />
-            </div>
-          </div>
-          <div className="field">
-            <label>Plaats</label>
-            <input value={ride.location} onChange={(e) => set("location", e.target.value)} placeholder="(optioneel)" />
-          </div>
-          <div className="field">
-            <label>Duur (min)</label>
-            <input
-              type="number"
-              value={ride.durationMin}
-              onChange={(e) => set("durationMin", Math.max(15, +e.target.value || 0))}
-            />
-          </div>
-          </details>
-
-          <div className="row">
-            <a className="btn primary" href={googleCalendarUrl(ride)} target="_blank" rel="noopener noreferrer">
-              Zet in Google Agenda
-            </a>
-            <button className="btn ghost" onClick={downloadIcs}>.ics downloaden</button>
-          </div>
-        </section>
+          <a className="btn primary" href={googleCalendarUrl(ride)} target="_blank" rel="noopener noreferrer">
+            Zet in agenda
+          </a>
+          <p className="foot muted">
+            Titel vul je hier in; datum, tijd en plaats volgen uit de tekst (24u-klok). Bewerk het bericht en de rit past zich live aan.
+          </p>
+        </>
       )}
-
-      <footer className="foot muted">
-        WhatsApp kan niet automatisch uitgelezen worden — plak het bericht hier. De knop opent
-        Google Agenda vooraf ingevuld; jij tapt "Opslaan".
-      </footer>
     </>
   );
+}
+
+const MONTHS = ["", "jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"];
+function monthAbbr(isoDate: string): string {
+  return MONTHS[+isoDate.slice(5, 7)].toUpperCase();
 }

@@ -19,7 +19,7 @@ export function readinessFrom(series: DayPoint[]): Readiness | null {
       tsb,
       label: "Fris",
       advice: "Je bent uitgerust — goede dag voor een zware sessie of intervallen.",
-      color: "#16a34a",
+      color: "#BFCDE0",
     };
   }
   if (tsb >= t.neutral) {
@@ -28,7 +28,7 @@ export function readinessFrom(series: DayPoint[]): Readiness | null {
       tsb,
       label: "Prima",
       advice: "Normale vorm — bouw rustig verder, niets forceren.",
-      color: "#2563eb",
+      color: "#8b93c4",
     };
   }
   if (tsb >= t.tired) {
@@ -37,7 +37,7 @@ export function readinessFrom(series: DayPoint[]): Readiness | null {
       tsb,
       label: "Vermoeid",
       advice: "Vermoeidheid stapelt op — hou het licht of doe een hersteltraining.",
-      color: "#d97706",
+      color: "#6f6a93",
     };
   }
   return {
@@ -45,6 +45,6 @@ export function readinessFrom(series: DayPoint[]): Readiness | null {
     tsb,
     label: "Rust",
     advice: "Sterk negatieve vorm — plan rust of een heel rustige dag.",
-    color: "#dc2626",
+    color: "#c96a78",
   };
 }

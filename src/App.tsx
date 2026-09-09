@@ -15,7 +15,7 @@ export default function App() {
           <svg viewBox="0 0 24 24" aria-hidden>
             <path d="M3 12h3l2.5 6L12 4l3 12 2-6h4" />
           </svg>
-          Vandaag
+          Jij
         </button>
         <button className={tab === "plan" ? "active" : ""} onClick={() => setTab("plan")}>
           <svg viewBox="0 0 24 24" aria-hidden>

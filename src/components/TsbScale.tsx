@@ -13,10 +13,10 @@ export function TsbScale({ tsb }: { tsb: number }) {
   const clamp = (n: number) => Math.max(0, Math.min(100, n));
 
   const zones = [
-    { key: "rust", from: min, to: t.tired, color: "#dc2626" },
-    { key: "vermoeid", from: t.tired, to: t.neutral, color: "#d97706" },
-    { key: "prima", from: t.neutral, to: t.fresh, color: "#2563eb" },
-    { key: "fris", from: t.fresh, to: max, color: "#16a34a" },
+    { key: "rust", from: min, to: t.tired, color: "#c96a78" },
+    { key: "vermoeid", from: t.tired, to: t.neutral, color: "#6f6a93" },
+    { key: "prima", from: t.neutral, to: t.fresh, color: "#8b93c4" },
+    { key: "fris", from: t.fresh, to: max, color: "#BFCDE0" },
   ];
 
   return (

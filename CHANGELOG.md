@@ -28,6 +28,11 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
   bewerkbaar → "Zet in Google Agenda" (template-link) of `.ics`-download. ADR 0007.
   Parser + agenda-link unit-getest (`npm test`).
 
+- **v2-redesign** (ADR 0008): home "Jij" met swipebare cijfer-carousel (Vorm/
+  Vermoeidheid/Fitness/Load, elk eigen visual), Plannen als één rit-kaart met inline
+  titel en één actie. Donker palet (60/30/10), self-hosted Apotek-display + Inter,
+  zeer zachte schaduw. Edge-to-edge trendgrafiek.
+
 ### Changed
 - Load-bron voor v0 = Strava Relative Effort i.p.v. zelf-berekende Edwards-TRIMP.
   ADR 0002 geamendeerd door ADR 0005; PMC-wiskunde ongewijzigd.
