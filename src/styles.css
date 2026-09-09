@@ -73,7 +73,10 @@ body { margin: 0; background: var(--bg); color: var(--text);
 .glossary dd { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
 .glossary dt:first-child { margin-top: 0; }
 
-.trend svg { width: 100%; height: auto; display: block; }
+.trend-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.trend svg { display: block; }
+.trend .grid { stroke: var(--border); stroke-width: 1; opacity: .6; }
+.trend .xlabel { fill: var(--muted); font-size: 9px; }
 .trend .axis { stroke: var(--border); stroke-width: 1; }
 .trend .ctl { stroke: var(--ctl); stroke-width: 2; }
 .trend .atl { stroke: var(--atl); stroke-width: 2; stroke-dasharray: 4 3; }
@@ -114,3 +117,11 @@ body { margin: 0; background: var(--bg); color: var(--text);
 .btn.primary { background: var(--ctl); border-color: var(--ctl); color: #fff; }
 .btn.ghost { background: none; }
 .btn:disabled { opacity: .45; cursor: not-allowed; }
+
+/* Parsed-ride result: mirrors the readiness card family */
+.plan-result { border-left: 4px solid var(--ctl); }
+.plan-result .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--ctl); }
+.plan-result .level { font-size: 20px; font-weight: 700; margin: 0; }
+.plan-result .advice { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
+.edit { margin-top: 8px; }
+.edit summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--muted); padding: 4px 0; }

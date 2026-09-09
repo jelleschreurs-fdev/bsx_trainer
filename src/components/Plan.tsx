@@ -56,8 +56,17 @@ export function Plan() {
       </section>
 
       {ride && (
-        <section className="card">
-          <h2>Controleer & pas aan</h2>
+        <section className="card plan-result">
+          <div className="readiness-row">
+            <div className="dot" aria-hidden />
+            <div>
+              <p className="level">{shortDate(ride.date)} · {ride.time}</p>
+              <p className="advice">{ride.title}{ride.location ? ` · ${ride.location}` : ""} · {ride.durationMin} min</p>
+            </div>
+          </div>
+
+          <details className="edit">
+            <summary>Controleer & pas aan</summary>
           <div className="field">
             <label>Titel</label>
             <input value={ride.title} onChange={(e) => set("title", e.target.value)} />
@@ -84,8 +93,7 @@ export function Plan() {
               onChange={(e) => set("durationMin", Math.max(15, +e.target.value || 0))}
             />
           </div>
-
-          <p className="muted preview">{shortDate(ride.date)} · {ride.time} · {ride.durationMin} min{ride.location ? ` · ${ride.location}` : ""}</p>
+          </details>
 
           <div className="row">
             <a className="btn primary" href={googleCalendarUrl(ride)} target="_blank" rel="noopener noreferrer">

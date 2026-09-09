@@ -32,3 +32,6 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
 - Load-bron voor v0 = Strava Relative Effort i.p.v. zelf-berekende Edwards-TRIMP.
   ADR 0002 geamendeerd door ADR 0005; PMC-wiskunde ongewijzigd.
 - "Vandaag" gebruikt de echte lokale datum i.p.v. een vaste seed-datum.
+- Trendgrafiek is nu horizontaal doorscrollbaar op leesbare schaal, met maandlabels.
+- "Plannen" in lijn gebracht met "Vandaag": de geparste rit toont als accent-kaart
+  (spiegelt de readiness-kaart) met de datum als anchor; het formulier zit ingeklapt.
