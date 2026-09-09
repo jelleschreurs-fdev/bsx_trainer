@@ -5,6 +5,7 @@ export interface ParsedRide {
   location: string;
   distanceKm?: number;
   durationMin: number;
+  ampmAmbiguous: boolean; // true when a bare hour (e.g. "9u") could be vm/nm
 }
 
 const WEEKDAYS: Record<string, number> = {
@@ -37,13 +38,15 @@ export function parseRide(text: string, now: Date = new Date()): ParsedRide | nu
   const date = parseDate(t, now);
   if (!date) return null;
 
-  const time = parseTime(t) ?? "09:00";
+  const tp = parseTime(t);
+  const time = tp?.time ?? "09:00";
+  const ampmAmbiguous = tp ? tp.ambiguous : true; // no time found -> default 09:00 is a guess
   const distanceKm = parseDistance(t);
   const location = parseLocation(text);
   const durationMin = distanceKm ? Math.max(30, Math.round((distanceKm / 25) * 60)) : 120;
 
   const title = distanceKm ? `Groepsrit ${distanceKm} km` : "Groepsrit";
-  return { date: iso(date), time, title, location, distanceKm, durationMin };
+  return { date: iso(date), time, title, location, distanceKm, durationMin, ampmAmbiguous };
 }
 
 function parseDate(t: string, now: Date): Date | null {
@@ -78,20 +81,33 @@ function parseDate(t: string, now: Date): Date | null {
   return null;
 }
 
-function parseTime(t: string): string | null {
-  // 9u, 9u30, 9:00, 9.30, 08h30, "om 9"
-  const m = t.match(/\b(\d{1,2})\s*(?:[:hu.]\s*(\d{2}))?\s*(?:uur|u|h)?\b/);
-  // Prefer an explicit time token; scan for one that looks like a clock.
+function parseTime(t: string): { time: string; ambiguous: boolean } | null {
+  // Day-part words resolve the am/pm question up front.
+  const period = /voormiddag|'?s ochtends|'?s morgens|\bvm\b|\bam\b/.test(t)
+    ? "am"
+    : /namiddag|avond|'?s avonds|\bnm\b|\bpm\b/.test(t)
+      ? "pm"
+      : null;
+
+  // 9u, 9u30, 9:00, 9.30, 08h30
   const tokens = [...t.matchAll(/\b(\d{1,2})\s*[:hu.]\s*(\d{2})\b|\b(\d{1,2})\s*(?:uur|u|h)\b/g)];
   for (const tok of tokens) {
-    const h = +(tok[1] ?? tok[3]);
+    let h = +(tok[1] ?? tok[3]);
     const min = tok[2] ? +tok[2] : 0;
-    if (h < 24 && min < 60) return `${String(h).padStart(2, "0")}:${String(min).padStart(2, "0")}`;
-  }
-  if (m && +m[1] < 24 && /uur|u|h|:/.test(m[0])) {
-    return `${String(+m[1]).padStart(2, "0")}:${m[2] ? m[2] : "00"}`;
+    if (h > 23 || min > 59) continue;
+
+    let ambiguous = false;
+    if (period === "pm" && h < 12) h += 12;
+    else if (period === "am" && h === 12) h = 0;
+    else if (!period && h >= 1 && h <= 12) ambiguous = true; // bare small hour -> vm/nm unclear
+
+    return { time: `${pad(h)}:${pad(min)}`, ambiguous };
   }
   return null;
+}
+
+function pad(n: number): string {
+  return String(n).padStart(2, "0");
 }
 
 function parseDistance(t: string): number | undefined {

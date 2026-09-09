@@ -11,6 +11,7 @@
 // ── ATHLETE ────────────────────────────────────────────────────────────
 // Mirrored from Strava. Update if Strava changes.
 export const athlete = {
+  name: "Jelle",
   weightKg: 102,
   sex: "male" as "male" | "female",
 

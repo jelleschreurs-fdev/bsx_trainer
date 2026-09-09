@@ -5,7 +5,7 @@ import { readinessFrom } from "../lib/readiness";
 import { duration, shortDate } from "../lib/format";
 import { Trend } from "./Trend";
 import { TsbScale } from "./TsbScale";
-import { app } from "../config";
+import { app, athlete } from "../config";
 
 // Local (not UTC) ISO date for "today", so rest days up to now decay fatigue correctly.
 function todayIso(): string {
@@ -46,9 +46,12 @@ export function Today() {
 
   return (
     <>
-      <header className="top">
-        <h1>Vandaag</h1>
-        <time className="muted">{shortDate(TODAY)}</time>
+      <header className="greeting">
+        <div className="avatar" aria-hidden>{athlete.name.slice(0, 1)}</div>
+        <div>
+          <p className="eyebrow">{shortDate(TODAY)}</p>
+          <h1>Klaar om te bewegen, {athlete.name}?</h1>
+        </div>
       </header>
 
       {readiness && (

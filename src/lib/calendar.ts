@@ -51,3 +51,19 @@ export function icsFor(r: ParsedRide): string {
 function escapeIcs(s: string): string {
   return s.replace(/([,;\\])/g, "\\$1").replace(/\n/g, "\\n");
 }
+
+const p2 = (n: number) => String(n).padStart(2, "0");
+
+/** Force an HH:MM to the given day-part, keeping the minutes. */
+export function applyPeriod(time: string, period: "am" | "pm"): string {
+  const [h, m] = time.split(":").map(Number);
+  const nh = period === "pm" ? (h % 12) + 12 : h % 12;
+  return `${p2(nh)}:${p2(m)}`;
+}
+
+/** End clock time from a start HH:MM plus a duration in minutes. */
+export function endTime(time: string, durationMin: number): string {
+  const [h, m] = time.split(":").map(Number);
+  const total = h * 60 + m + durationMin;
+  return `${p2(Math.floor(total / 60) % 24)}:${p2(total % 60)}`;
+}
