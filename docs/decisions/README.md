@@ -8,6 +8,18 @@ je herschrijft de geschiedenis niet.
 Waarom: de code toont *wat*, de ADR staaft *waarom*. Dat voorkomt dat een keuze
 maanden later "per ongeluk" wordt teruggedraaid.
 
+## Een beslissing wijzigen
+
+Een bestaande beslissing draai je nooit stilzwijgend om. De volgorde is vast:
+
+1. **Bevragen tegen de oude.** Benoem expliciet welke ADR je uitdaagt en wélke nieuwe
+   informatie de oude beslissing onderuithaalt (nieuwe data ≠ nieuwe mening).
+2. **Akkoord.** Pas na een expliciet akkoord gaat de wijziging door.
+3. **Docs bijwerken.** De oude ADR krijgt `Status: Vervangen door 00XX`; er komt een
+   nieuwe ADR die de oude noemt, de afweging en het akkoord vastlegt; `CHANGELOG` volgt.
+
+Zo blijft elke koerswijziging herleidbaar naar wélk feit en wélk akkoord haar rechtvaardigt.
+
 ## Nieuwe ADR
 
 Kopieer [`0000-adr-template.md`](0000-adr-template.md), geef het volgende nummer,
@@ -21,3 +33,4 @@ vul in, en link 'm vanuit `README.md`/`CHANGELOG.md` waar relevant.
 | [0002](0002-edwards-zone-trimp.md) | Edwards zone-TRIMP als load-model | Aanvaard |
 | [0003](0003-whatsapp-geen-autosync.md) | WhatsApp: geen auto-sync, paste-to-parse | Aanvaard |
 | [0004](0004-serverless-backend-voor-strava-secret.md) | Serverless backend voor Strava-secret | Aanvaard |
+| [0005](0005-relative-effort-als-v0-loadbron.md) | Relative Effort als v0 load-bron | Aanvaard (amendeert 0002) |

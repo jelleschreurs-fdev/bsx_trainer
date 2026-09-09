@@ -1,7 +1,7 @@
 # 0002. Edwards zone-TRIMP als load-model
 
 - **Datum:** 2026-09-09
-- **Status:** Aanvaard
+- **Status:** Aanvaard — bronkeuze geamendeerd door [0005](0005-relative-effort-als-v0-loadbron.md)
 
 ## Context
 

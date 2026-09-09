@@ -38,10 +38,14 @@ export const athlete = {
 
 // ── MODEL ──────────────────────────────────────────────────────────────
 export const model = {
-  // Load per activity. v0 = Edwards zone-TRIMP (minutes-in-zone × weight).
-  // Sport-agnostic, needs only the HR zones above. 'banister' / 'power-tss'
-  // are future seams, not yet implemented.
-  loadMethod: "edwards" as "edwards" | "banister" | "power-tss",
+  // Load per activity. v0 = Strava Relative Effort (already HR-zone-weighted,
+  // zero extra API calls) — see ADR 0005, which amends ADR 0002. 'edwards'
+  // (self-computed from HR streams), 'banister' and 'power-tss' are seams.
+  loadMethod: "strava-relative-effort" as
+    | "strava-relative-effort"
+    | "edwards"
+    | "banister"
+    | "power-tss",
 
   // Edwards zone weights, index = zone-1.
   zoneWeights: [1, 2, 3, 4, 5],

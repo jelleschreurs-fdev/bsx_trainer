@@ -45,4 +45,28 @@ Wijzigingen worden gestaafd en onderhouden volgens een vaste conventie:
 
 ## Draaien
 
-Volgt met de v0-scaffold.
+```bash
+npm install
+npm run dev      # lokale dev-server
+npm run build    # type-check + productiebuild naar dist/
+npm run preview  # bekijk de build
+```
+
+De app leest `public/activities.json`. Die staat met echte seed-data in de repo.
+
+### Data verversen
+
+`npm run pull` haalt je laatste activiteiten op en herschrijft `public/activities.json`.
+Vereist je **eigen** Strava API-app (https://www.strava.com/settings/api) en env-vars —
+zie `scripts/pull-strava.mjs`. Zet ze in een `.env` (staat in `.gitignore`, nooit committen):
+
+```
+STRAVA_CLIENT_ID=…
+STRAVA_CLIENT_SECRET=…
+STRAVA_REFRESH_TOKEN=…
+```
+
+### Op je gsm
+
+De app is een PWA (`manifest.webmanifest` + service worker). Host `dist/` ergens
+(bv. een statische host), open op je telefoon en "Zet op beginscherm".

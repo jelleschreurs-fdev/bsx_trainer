@@ -1,0 +1,18 @@
+{
+  "name": "BSX Trainer",
+  "short_name": "BSX",
+  "description": "Persoonlijke readiness- en trainingsinzichten op Strava-data.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0e1113",
+  "theme_color": "#0e1113",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
