@@ -38,3 +38,4 @@ vul in, en link 'm vanuit `README.md`/`CHANGELOG.md` waar relevant.
 | [0007](0007-agenda-via-template-link.md) | Agenda via template-link, geen API | Aanvaard (concretiseert 0003) |
 | [0008](0008-ui-richting-en-visuele-identiteit.md) | UI-richting + visuele identiteit (v2) | Aanvaard |
 | [0009](0009-pull-to-refresh-sync.md) | Pull-to-refresh triggert verse sync | Aanvaard |
+| [0010](0010-locatieherkenning.md) | Locatieherkenning via geocoding | Aanvaard |

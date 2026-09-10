@@ -20,13 +20,13 @@
   </style>
 </helmet>
 
-<div style="position:relative; width:390px; min-height:990px; overflow:hidden; background:#000505; color:#FEFCFD; font-family:'Inter',system-ui,sans-serif;">
+<div style="position:relative; width:390px; min-height:1040px; overflow:hidden; background:#000505; color:#FEFCFD; font-family:'Inter',system-ui,sans-serif;">
 
   <div style="position:absolute; inset:0; background:
       radial-gradient(130% 65% at 85% -8%, rgba(59,51,85,.68), transparent 58%),
       radial-gradient(90% 55% at -15% 16%, rgba(93,93,129,.32), transparent 55%),
       radial-gradient(80% 50% at 50% 108%, rgba(191,205,224,.10), transparent 60%);"></div>
-  <svg viewBox="0 0 390 990" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; opacity:.06;">
+  <svg viewBox="0 0 390 1040" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; opacity:.06;">
     <g fill="none" stroke="#BFCDE0" stroke-width="1">
       <path d="M-20 140 Q120 80 220 150 T430 140"/>
       <path d="M-20 185 Q120 125 220 195 T430 185"/>
@@ -106,15 +106,16 @@
       <i style="width:6px; height:6px; border-radius:50%; background:#5D5D81; opacity:.5;"></i>
     </div>
 
+    <!-- Shared month title: governs the graph and the history below; swipe to change month -->
+    <div style="display:flex; align-items:center; justify-content:space-between; margin:10px 6px 14px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5D5D81" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+      <span class="disp" style="font-weight:800; font-size:21px; letter-spacing:.03em;">September</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BFCDE0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
     <!-- Trend · three named series -->
     <div style="border-radius:22px; padding:18px 0 14px; margin-bottom:16px;
         background:linear-gradient(160deg, rgba(38,33,58,.7), rgba(20,18,38,.82)); border:1px solid rgba(191,205,224,.12);
         box-shadow:0 16px 36px rgba(0,0,0,.42);">
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:0 18px 12px;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5D5D81" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
-        <span style="font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:#8f8aa3;">September &middot; deze maand</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8f8aa3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-      </div>
       <svg viewBox="0 0 390 162" style="width:100%; height:150px; display:block;">
         <!-- horizontal gridlines with value labels at multiples of ten -->
         <g stroke="rgba(191,205,224,.09)" stroke-width="1">
@@ -149,31 +150,15 @@
       <div style="padding:7px 18px 0; font-size:10.5px; color:#5D5D81;">Stijging t.o.v. vorige maand &middot; dagelijks bijgewerkt</div>
     </div>
 
-    <!-- History with a count -->
-    <div style="display:flex; align-items:baseline; justify-content:space-between; margin:0 4px 10px;">
-      <span style="font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:#8f8aa3;">Geschiedenis</span>
-      <span class="num" style="font-weight:800; font-size:20px; color:#BFCDE0;">40<span style="font-size:11px; color:#8f8aa3; font-weight:600; letter-spacing:0; margin-left:5px; font-family:Inter;">ritten &middot; 90 dgn</span></span>
-    </div>
-    <div style="border-radius:20px; padding:16px; display:flex; gap:14px; align-items:center;
-        background:linear-gradient(160deg, rgba(38,33,58,.7), rgba(20,18,38,.82)); border:1px solid rgba(191,205,224,.12);
-        box-shadow:0 12px 30px rgba(0,0,0,.4);">
-      <div style="width:46px; height:46px; border-radius:14px; flex:none; position:relative; display:grid; place-items:center;
-          background:rgba(191,205,224,.12); border:1px solid rgba(191,205,224,.18);">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#BFCDE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17 L10 8 h5 l3 9"/></svg>
-        <span style="position:absolute; right:-6px; bottom:-6px; width:20px; height:20px; border-radius:50%; background:#6fcf97;
-            display:grid; place-items:center; box-shadow:0 2px 6px rgba(0,0,0,.5);">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#08130c" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+    <!-- History: collapsed by default, count of ALL activity types (not only rides) -->
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:16px 18px; border-radius:18px;
+          background:linear-gradient(160deg, rgba(38,33,58,.7), rgba(20,18,38,.82)); border:1px solid rgba(191,205,224,.12); box-shadow:0 10px 26px rgba(0,0,0,.38);">
+        <span style="font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:#8f8aa3;">Geschiedenis</span>
+        <span style="display:inline-flex; align-items:center; gap:12px;">
+          <span class="num" style="font-weight:800; font-size:18px; color:#BFCDE0;">8<span style="font-size:11px; color:#8f8aa3; font-weight:600; letter-spacing:0; margin-left:5px; font-family:Inter;">activiteiten</span></span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8f8aa3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
         </span>
       </div>
-      <div style="flex:1; min-width:0;">
-        <div style="display:flex; align-items:center; gap:8px;">
-          <span style="font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#6fcf97;">Voltooid</span>
-          <span style="font-size:12px; color:#8f8aa3;">gisteren &middot; di 8 sep</span>
-        </div>
-        <div class="disp" style="font-weight:700; font-size:16px; letter-spacing:.02em; margin-top:4px;">Beat everyday &middot; Day 8</div>
-        <div style="color:#8f8aa3; font-size:13px; margin-top:2px;">VirtualRide &middot; 1u30 &middot; load 50</div>
-      </div>
-    </div>
   </div>
 
   <div style="position:absolute; left:0; right:0; bottom:0; display:flex; padding:12px 0 16px;
