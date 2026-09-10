@@ -55,28 +55,28 @@
         </div>
       </div>
 
-      <div style="font-size:15px; color:#d5d1de; margin:22px 2px 0;">
-        Je vermoeidheid stapelt op — hou het vandaag licht.
-      </div>
-      <div style="font-size:13px; color:#8f8aa3; margin:10px 2px 0;">Aanrader voor vandaag: <span style="color:#BFCDE0; font-weight:600;">rustige duurrit of hersteldag</span>.</div>
-
-      <!-- Status bar with a numbered indicator (the number sits ON the scale) -->
-      <div style="position:relative; margin:46px 0 10px;">
-        <div style="position:absolute; left:38%; top:-34px; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center;">
-          <span class="num" style="display:inline-block; padding:4px 11px; border-radius:11px; font-weight:800; font-size:17px; color:#F2B45E;
+      <!-- Status bar first: vertical-line indicator + hatched inactive zones -->
+      <div style="position:relative; margin:34px 0 8px; padding-top:30px;">
+        <div style="position:absolute; left:38%; top:0; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; z-index:2;">
+          <span class="num" style="display:inline-block; padding:3px 10px; border-radius:9px; font-weight:800; font-size:16px; color:#F2B45E;
               background:rgba(242,180,94,.16); border:1px solid rgba(242,180,94,.55); box-shadow:0 4px 12px rgba(0,0,0,.4);">&minus;20</span>
-          <span style="width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-top:7px solid #F2B45E; margin-top:-1px;"></span>
+          <span style="width:2.5px; height:30px; margin-top:3px; border-radius:2px; background:#F2B45E; box-shadow:0 0 8px rgba(242,180,94,.85);"></span>
         </div>
-        <div style="display:flex; height:14px; border-radius:8px; overflow:hidden; gap:2px;">
-          <span style="width:22%; background:#e5736f; opacity:.32;"></span>
-          <span style="width:23%; background:#f2b45e; opacity:1; box-shadow:0 0 16px rgba(242,180,94,.6);"></span>
-          <span style="width:27%; background:#6aa6ff; opacity:.32;"></span>
-          <span style="width:28%; background:#6fcf97; opacity:.32;"></span>
+        <div style="display:flex; height:16px; border-radius:8px; overflow:hidden; gap:2px;">
+          <span style="width:22%; background:repeating-linear-gradient(45deg, rgba(229,115,111,.5) 0 2px, rgba(229,115,111,.12) 2px 6px);"></span>
+          <span style="width:23%; background:#f2b45e; box-shadow:0 0 16px rgba(242,180,94,.55);"></span>
+          <span style="width:27%; background:repeating-linear-gradient(45deg, rgba(106,166,255,.5) 0 2px, rgba(106,166,255,.12) 2px 6px);"></span>
+          <span style="width:28%; background:repeating-linear-gradient(45deg, rgba(111,207,151,.5) 0 2px, rgba(111,207,151,.12) 2px 6px);"></span>
         </div>
       </div>
       <div style="display:flex; justify-content:space-between; font-size:10.5px; color:#8f8aa3;">
         <span>rust</span><span style="color:#F2B45E; font-weight:600;">vermoeid</span><span>prima</span><span>fris</span>
       </div>
+
+      <div style="font-size:15px; color:#d5d1de; margin:22px 2px 0;">
+        Je vermoeidheid stapelt op &mdash; hou het vandaag licht.
+      </div>
+      <div style="font-size:13px; color:#8f8aa3; margin:10px 2px 0;">Aanrader voor vandaag: <span style="color:#BFCDE0; font-weight:600;">rustige duurrit of hersteldag</span>.</div>
     </div>
 
     <!-- Supporting metrics · ATL / CTL -->
