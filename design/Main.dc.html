@@ -20,30 +20,30 @@
   </style>
 </helmet>
 
-<div style="position:relative; width:390px; min-height:960px; overflow:hidden; background:#000505; color:#FEFCFD; font-family:'Inter',system-ui,sans-serif;">
+<div style="position:relative; width:390px; min-height:990px; overflow:hidden; background:#000505; color:#FEFCFD; font-family:'Inter',system-ui,sans-serif;">
 
   <div style="position:absolute; inset:0; background:
       radial-gradient(130% 65% at 85% -8%, rgba(59,51,85,.68), transparent 58%),
       radial-gradient(90% 55% at -15% 16%, rgba(93,93,129,.32), transparent 55%),
       radial-gradient(80% 50% at 50% 108%, rgba(191,205,224,.10), transparent 60%);"></div>
-  <svg viewBox="0 0 390 960" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; opacity:.06;">
+  <svg viewBox="0 0 390 990" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; opacity:.06;">
     <g fill="none" stroke="#BFCDE0" stroke-width="1">
       <path d="M-20 140 Q120 80 220 150 T430 140"/>
       <path d="M-20 185 Q120 125 220 195 T430 185"/>
       <path d="M-20 240 Q140 180 250 250 T430 240"/>
-      <path d="M-20 760 Q130 700 240 770 T430 760"/>
+      <path d="M-20 740 Q130 680 240 750 T430 740"/>
     </g>
   </svg>
 
   <div style="position:relative; padding:22px 18px 96px;">
 
-    <!-- HERO · personal address + Vorm combined -->
+    <!-- HERO · personal address + Vorm, status carried by a numbered bar indicator -->
     <div style="position:relative; border-radius:26px; padding:22px; overflow:hidden;
         background:linear-gradient(160deg, rgba(59,51,85,.60), rgba(26,23,48,.74));
         border:1px solid rgba(191,205,224,.16); box-shadow:0 22px 48px rgba(0,0,0,.46), inset 0 1px 0 rgba(255,255,255,.10);
         backdrop-filter:blur(14px); margin-bottom:16px;">
       <div style="position:absolute; top:-60px; right:-50px; width:220px; height:220px; border-radius:50%;
-          background:radial-gradient(circle, rgba(242,180,94,.24), transparent 70%);"></div>
+          background:radial-gradient(circle, rgba(242,180,94,.22), transparent 70%);"></div>
 
       <div style="display:flex; align-items:center; gap:12px;">
         <div class="disp" style="width:44px; height:44px; border-radius:50%; display:grid; place-items:center; flex:none;
@@ -55,17 +55,21 @@
         </div>
       </div>
 
-      <div class="disp" style="font-weight:800; font-size:44px; line-height:1; color:#F2B45E; margin:22px 0 0;">Vermoeid</div>
-      <div style="color:#c9c4d6; font-size:14px; margin-top:8px;">Je vermoeidheid stapelt op — hou het vandaag licht.</div>
+      <div style="font-size:15px; color:#d5d1de; margin:22px 2px 0;">
+        Je vermoeidheid stapelt op — hou het vandaag licht.
+      </div>
+      <div style="font-size:13px; color:#8f8aa3; margin:10px 2px 0;">Aanrader voor vandaag: <span style="color:#BFCDE0; font-weight:600;">rustige duurrit of hersteldag</span>.</div>
 
-      <div style="position:relative; margin:30px 0 8px;">
-        <div style="position:absolute; left:38%; top:-20px; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center;">
-          <span class="disp" style="font-size:11px; font-weight:700; color:#F2B45E;">JIJ</span>
-          <span style="width:0; height:0; border-left:5px solid transparent; border-right:5px solid transparent; border-top:6px solid #F2B45E; margin-top:2px;"></span>
+      <!-- Status bar with a numbered indicator (the number sits ON the scale) -->
+      <div style="position:relative; margin:46px 0 10px;">
+        <div style="position:absolute; left:38%; top:-34px; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center;">
+          <span class="num" style="display:inline-block; padding:4px 11px; border-radius:11px; font-weight:800; font-size:17px; color:#F2B45E;
+              background:rgba(242,180,94,.16); border:1px solid rgba(242,180,94,.55); box-shadow:0 4px 12px rgba(0,0,0,.4);">&minus;20</span>
+          <span style="width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-top:7px solid #F2B45E; margin-top:-1px;"></span>
         </div>
-        <div style="display:flex; height:12px; border-radius:7px; overflow:hidden; gap:2px;">
+        <div style="display:flex; height:14px; border-radius:8px; overflow:hidden; gap:2px;">
           <span style="width:22%; background:#e5736f; opacity:.32;"></span>
-          <span style="width:23%; background:#f2b45e; opacity:1; box-shadow:0 0 14px rgba(242,180,94,.6);"></span>
+          <span style="width:23%; background:#f2b45e; opacity:1; box-shadow:0 0 16px rgba(242,180,94,.6);"></span>
           <span style="width:27%; background:#6aa6ff; opacity:.32;"></span>
           <span style="width:28%; background:#6fcf97; opacity:.32;"></span>
         </div>
@@ -75,7 +79,7 @@
       </div>
     </div>
 
-    <!-- Supporting metrics · ATL / CTL / Load -->
+    <!-- Supporting metrics · ATL / CTL -->
     <div style="display:flex; gap:12px; margin-bottom:8px; overflow:hidden;">
       <div style="flex:0 0 56%; border-radius:20px; padding:18px;
           background:linear-gradient(160deg, rgba(38,33,58,.85), rgba(20,18,38,.9)); border:1px solid rgba(191,205,224,.12);
@@ -85,7 +89,7 @@
           <span class="num" style="font-weight:800; font-size:46px; line-height:1;">48</span>
           <span style="color:#F2B45E; font-size:14px; font-weight:600;">&#9650; 2.2</span>
         </div>
-        <div style="color:#8f8aa3; font-size:11px; margin-top:12px;">ATL &middot; 7-daags gemiddelde</div>
+        <div style="color:#8f8aa3; font-size:11px; margin-top:12px;">7-daags gemiddelde</div>
       </div>
       <div style="flex:0 0 46%; border-radius:20px; padding:18px;
           background:linear-gradient(160deg, rgba(38,33,58,.85), rgba(20,18,38,.9)); border:1px solid rgba(191,205,224,.12);
@@ -95,7 +99,7 @@
           <span class="num" style="font-weight:800; font-size:46px; line-height:1;">28</span>
           <span style="color:#6fcf97; font-size:14px; font-weight:600;">&#9650; 17</span>
         </div>
-        <div style="color:#8f8aa3; font-size:11px; margin-top:12px;">CTL &middot; 42-daags gemiddelde</div>
+        <div style="color:#8f8aa3; font-size:11px; margin-top:12px;">42-daags gemiddelde</div>
       </div>
     </div>
     <div style="display:flex; gap:6px; justify-content:center; margin-bottom:18px;">

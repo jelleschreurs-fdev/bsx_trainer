@@ -1,7 +1,21 @@
 {
   "artboards": [
-    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 390, "h": 940 },
-    { "file": "Plannen.dc.html", "x": 490, "y": 0, "w": 390, "h": 940 }
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 990
+    },
+    {
+      "file": "Plannen.dc.html",
+      "x": 490,
+      "y": 0,
+      "w": 390,
+      "h": 940
+    }
   ],
-  "launch": { "view": "canvas" }
+  "launch": {
+    "view": "canvas"
+  }
 }
