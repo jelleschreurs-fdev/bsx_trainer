@@ -73,7 +73,7 @@ export const app = {
   },
 
   // History window for the trend graph (days).
-  trendDays: 90,
+  trendDays: 30,
 
   // Live data endpoint (the Cloudflare Worker's /api/activities, ADR 0006).
   // Empty = use the bundled public/activities.json seed. Fill after deploying v1.
