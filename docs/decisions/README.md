@@ -39,3 +39,4 @@ vul in, en link 'm vanuit `README.md`/`CHANGELOG.md` waar relevant.
 | [0008](0008-ui-richting-en-visuele-identiteit.md) | UI-richting + visuele identiteit (v2) | Aanvaard |
 | [0009](0009-pull-to-refresh-sync.md) | Pull-to-refresh triggert verse sync | Aanvaard |
 | [0010](0010-locatieherkenning.md) | Locatieherkenning via geocoding | Aanvaard |
+| [0011](0011-zonebasis-hartslag-primair.md) | Zonebasis: hartslag primair, vermogen als 2e lens | Aanvaard |

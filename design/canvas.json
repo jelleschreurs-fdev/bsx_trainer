@@ -22,11 +22,32 @@
       "h": 760
     },
     {
-      "file": "Ritdetail.dc.html",
+      "file": "RitOverzicht.dc.html",
       "x": 1470,
       "y": 0,
       "w": 390,
-      "h": 1840
+      "h": 1000
+    },
+    {
+      "file": "RitAI.dc.html",
+      "x": 1960,
+      "y": 0,
+      "w": 390,
+      "h": 560
+    },
+    {
+      "file": "RitIntensiteit.dc.html",
+      "x": 2450,
+      "y": 0,
+      "w": 390,
+      "h": 760
+    },
+    {
+      "file": "RitVermogen.dc.html",
+      "x": 2940,
+      "y": 0,
+      "w": 390,
+      "h": 780
     }
   ],
   "launch": {

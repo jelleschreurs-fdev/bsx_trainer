@@ -33,6 +33,17 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
   titel en één actie. Donker palet (60/30/10), self-hosted Apotek-display + Inter,
   zeer zachte schaduw. Edge-to-edge trendgrafiek.
 
+- **Ontwerp-canvas** (`design/`): high-fidelity artboards (`.dc.html` + `canvas.json`)
+  voor Jij, Plannen, Trainingslog en het rit-detail, gepubliceerd als Artifact.
+- **Rit-detail als categorieën**: het detailscherm is opgesplitst in swipebare
+  categorieën (Overzicht · AI-analyse · Intensiteit · Vermogen) met een segment-nav
+  i.p.v. één lange scroll. AI-analyse als tweede tab, met sterkste punt bovenaan en
+  Sterk/Let op/Bijsturing eronder. "Beleving" (effort) in dezelfde gezoneerde stijl
+  als de Vorm-balk; actieve zone springt uit. "Beste inspanningen" tonen expliciet
+  de pieken ván die rit (groen, t.o.v. gem.). ADR 0011.
+- ADR 0011: zonebasis = hartslag primair, vermogen als tweede lens via een
+  HR/Vermogen-toggle in de zone-kaart; loop gebruikt run-HR-zones.
+
 ### Changed
 - Load-bron voor v0 = Strava Relative Effort i.p.v. zelf-berekende Edwards-TRIMP.
   ADR 0002 geamendeerd door ADR 0005; PMC-wiskunde ongewijzigd.
