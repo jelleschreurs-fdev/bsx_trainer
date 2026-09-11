@@ -8,7 +8,9 @@
     { "file": "RitIntensiteit.dc.html", "x": 2450, "y": 0, "w": 390, "h": 1080, "title": "Rit · Intensiteit" },
     { "file": "RitVermogen.dc.html", "x": 2940, "y": 0, "w": 390, "h": 1060, "title": "Rit · Vermogen" },
     { "file": "RitVoeding.dc.html", "x": 3430, "y": 0, "w": 390, "h": 880, "title": "Rit · Voeding" },
-    { "file": "RitRoute.dc.html", "x": 3920, "y": 0, "w": 390, "h": 1040, "title": "Rit · Route (buitenrit)" }
+    { "file": "RitRoute.dc.html", "x": 3920, "y": 0, "w": 390, "h": 1040, "title": "Rit · Route (buitenrit)" },
+    { "file": "RunOverzicht.dc.html", "x": 4410, "y": 0, "w": 390, "h": 1120, "title": "Loop · Overzicht" },
+    { "file": "RunIntensiteit.dc.html", "x": 4900, "y": 0, "w": 390, "h": 1000, "title": "Loop · Intensiteit" }
   ],
   "launch": {
     "view": "canvas"

@@ -50,6 +50,9 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
   de pieken ván die rit (groen, t.o.v. gem.). ADR 0011.
 - ADR 0011: zonebasis = hartslag primair, vermogen als tweede lens via een
   HR/Vermogen-toggle in de zone-kaart; loop gebruikt run-HR-zones.
+- **Multi-sport rit-detail** (ADR 0015): dezelfde categorie-structuur voor loop/
+  wandel/fiets; de sport bepaalt tabs en metrics. Loop-voorbeeld toegevoegd (geen
+  Vermogen-tab, tempo + cadans, splits per km, HR/Tempo-toggle als tweede lens).
 
 ### Changed
 - Load-bron voor v0 = Strava Relative Effort i.p.v. zelf-berekende Edwards-TRIMP.
