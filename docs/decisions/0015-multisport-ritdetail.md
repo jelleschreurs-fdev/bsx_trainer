@@ -30,7 +30,9 @@ Route-slot (ADR 0012):
   onderdelen** (zwem → T1 → fiets → T2 → loop). Krijgt een race-overzicht met
   totaaltijd + tijd per onderdeel + **transities (T1/T2)** als eigen segmenten;
   per onderdeel klik je door naar het discipline-detail hierboven. Duatlon =
-  idem zonder zwem. (Nog te ontwerpen als apart overzicht-frame.)
+  idem zonder zwem. Uitgewerkt als een race-overzicht-frame: totaaltijd +
+  tijdverdeling per onderdeel + de keten met doorklikbare onderdelen en de
+  wissels als eigen (getimede) segmenten.
 
 HR blijft in elke sport de ruggengraat (ADR 0011); de sport-eigen tweede lens
 (vermogen bij fietsen-met-power, tempo bij lopen) en de sport-eigen eenheden zijn

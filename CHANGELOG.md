@@ -54,8 +54,9 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
   wandel/fiets/zwem; de sport bepaalt tabs en metrics. Loop-voorbeeld (geen
   Vermogen-tab, tempo + cadans, splits per km, HR/Tempo-toggle) en zwem-voorbeeld
   (Techniek-tab met SWOLF/slaglengte/slagritme, tempo per 100 m, splits per 100 m)
-  toegevoegd. Triatlon/duatlon als samengesteld race-overzicht is beschreven en nog
-  te ontwerpen.
+  toegevoegd. Triatlon/duatlon uitgewerkt als samengesteld race-overzicht:
+  totaaltijd + tijdverdeling, de keten (zwem/T1/fiets/T2/loop) met doorklikbare
+  onderdelen en wissels als eigen segmenten.
 
 ### Changed
 - Load-bron voor v0 = Strava Relative Effort i.p.v. zelf-berekende Edwards-TRIMP.
