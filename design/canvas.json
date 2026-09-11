@@ -5,7 +5,7 @@
     { "file": "Geschiedenis.dc.html", "x": 980, "y": 0, "w": 390, "h": 800 },
     { "file": "RitOverzicht.dc.html", "x": 1470, "y": 0, "w": 390, "h": 1260, "title": "Rit · Overzicht" },
     { "file": "RitAI.dc.html", "x": 1960, "y": 0, "w": 390, "h": 700, "title": "Rit · AI-analyse" },
-    { "file": "RitIntensiteit.dc.html", "x": 2450, "y": 0, "w": 390, "h": 1200, "title": "Rit · Intensiteit" },
+    { "file": "RitIntensiteit.dc.html", "x": 2450, "y": 0, "w": 390, "h": 1060, "title": "Rit · Intensiteit" },
     { "file": "RitVermogen.dc.html", "x": 2940, "y": 0, "w": 390, "h": 1040, "title": "Rit · Vermogen" },
     { "file": "RitVoeding.dc.html", "x": 3430, "y": 0, "w": 390, "h": 880, "title": "Rit · Voeding" },
     { "file": "RitRoute.dc.html", "x": 3920, "y": 0, "w": 390, "h": 1040, "title": "Rit · Route (buitenrit)" }
