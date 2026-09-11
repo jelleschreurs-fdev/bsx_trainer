@@ -19,13 +19,13 @@
   </style>
 <style>.noscroll{scrollbar-width:none;-ms-overflow-style:none}.noscroll::-webkit-scrollbar{display:none}*::-webkit-scrollbar{width:0;height:0}</style>
 </helmet>
-<div style="position:relative; width:390px; min-height:1120px; overflow:hidden; background:#000505; color:#FEFCFD; font-family:'Inter',system-ui,sans-serif;">
+<div style="position:relative; width:390px; min-height:1040px; overflow:hidden; background:#000505; color:#FEFCFD; font-family:'Inter',system-ui,sans-serif;">
   <div style="position:absolute; inset:0; background:
       radial-gradient(130% 40% at 85% -2%, rgba(59,51,85,.68), transparent 58%),
       radial-gradient(90% 30% at -15% 10%, rgba(93,93,129,.32), transparent 55%),
       radial-gradient(80% 26% at 50% 104%, rgba(191,205,224,.10), transparent 60%);"></div>
-  <svg viewBox="0 0 390 1120" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; opacity:.055;">
-    <g fill="none" stroke="#BFCDE0" stroke-width="1"><path d="M-20 170 Q120 110 220 180 T430 170"/><path d="M-20 960 Q140 900 250 970 T430 960"/></g>
+  <svg viewBox="0 0 390 1040" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; opacity:.055;">
+    <g fill="none" stroke="#BFCDE0" stroke-width="1"><path d="M-20 170 Q120 110 220 180 T430 170"/><path d="M-20 880 Q140 820 250 890 T430 880"/></g>
   </svg>
   <div style="position:relative; padding:22px 18px 40px;">
     <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
@@ -43,12 +43,13 @@
         <span style="flex:none; padding:8px 14px; border-radius:999px; font-size:13px; font-weight:700; display:inline-flex; align-items:center; gap:7px; white-space:nowrap; color:#8f8aa3; border:1px solid rgba(191,205,224,.12);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8f8aa3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Overzicht</span>
         <span style="flex:none; padding:8px 14px; border-radius:999px; font-size:13px; font-weight:700; display:inline-flex; align-items:center; gap:7px; white-space:nowrap; color:#8f8aa3; border:1px solid rgba(191,205,224,.12);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8f8aa3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M18 15l.7 1.8L21 18l-2.3.7L18 21l-.7-2.3L15 18l2.3-1z"/></svg>AI-analyse</span>
         <span style="flex:none; padding:8px 14px; border-radius:999px; font-size:13px; font-weight:700; display:inline-flex; align-items:center; gap:7px; white-space:nowrap; color:#8f8aa3; border:1px solid rgba(191,205,224,.12);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8f8aa3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2.5 7 4-14 2.5 7h5"/></svg>Intensiteit</span>
-        <span style="flex:none; padding:8px 14px; border-radius:999px; font-size:13px; font-weight:700; display:inline-flex; align-items:center; gap:7px; white-space:nowrap; background:rgba(191,205,224,.16); color:#FEFCFD; border:1px solid rgba(191,205,224,.24);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FEFCFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 10 8l4 6 3-5 4 11z"/></svg>Route</span>
+        <span id="acttab" style="flex:none; padding:8px 14px; border-radius:999px; font-size:13px; font-weight:700; display:inline-flex; align-items:center; gap:7px; white-space:nowrap; background:rgba(191,205,224,.16); color:#FEFCFD; border:1px solid rgba(191,205,224,.24);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FEFCFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 10 8l4 6 3-5 4 11z"/></svg>Route</span>
         <span style="flex:none; padding:8px 14px; border-radius:999px; font-size:13px; font-weight:700; display:inline-flex; align-items:center; gap:7px; white-space:nowrap; color:#8f8aa3; border:1px solid rgba(191,205,224,.12);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8f8aa3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6v3l1.5 3V20a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V8L9 5z"/><path d="M8.5 12h7"/></svg>Voeding</span>
       </div>
+      <div style="position:absolute; top:0; right:0; width:36px; height:100%; pointer-events:none; background:linear-gradient(90deg, transparent, rgba(2,2,6,.92));"></div>
     </div>
     <div style="margin-top:0;">
-      <div class="card" style="padding:16px 0 10px; margin-top:16px;">
+      <div class="card" style="padding:16px 0 10px; margin-top:22px;">
         <div style="display:flex; justify-content:space-between; align-items:baseline; padding:0 18px 10px;">
           <span class="lbl">Hoogteprofiel</span>
           <span style="font-size:12px; color:#8f8aa3;">194 hm &middot; 53 km</span>
@@ -64,7 +65,7 @@
           <g font-family="Inter,sans-serif" font-size="9" fill="#6f6a82"><text x="2" y="134">0</text><text x="98" y="134" text-anchor="middle">13</text><text x="195" y="134" text-anchor="middle">26 km</text><text x="292" y="134" text-anchor="middle">40</text><text x="388" y="134" text-anchor="end">53</text></g>
         </svg>
       </div>
-      <div class="card" style="padding:16px 18px; margin-top:14px;">
+      <div class="card" style="padding:16px 18px; margin-top:20px;">
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2px;">
           <span class="lbl" style="margin:0;">Segmenten</span>
           <span style="font-size:11px; font-weight:700; color:#6fcf97;">14 PR's</span>
@@ -100,29 +101,9 @@
             <div style="margin-top:4px; display:inline-flex; align-items:center; gap:4px; font-size:10px; font-weight:800; color:#f2c14e; background:rgba(242,193,78,.16); border:1px solid #f2c14e55; padding:1px 6px; border-radius:6px;"><svg width="9" height="9" viewBox="0 0 24 24" fill="#f2c14e" stroke="none"><circle cx="12" cy="9" r="6"/><path d="M8 14 L6 22 L12 19 L18 22 L16 14 Z"/></svg>1e PR</div>
           </div>
         </div>
-        <div style="display:flex; align-items:center; gap:12px; padding:12px 0; border-top:1px solid rgba(191,205,224,.08);">
-          <div style="flex:1; min-width:0;">
-            <div style="font-size:14px; font-weight:600; color:#FEFCFD; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Kauwbosstraat</div>
-            <div style="font-size:11px; color:#8f8aa3; margin-top:3px;">2.0 km &middot; 21 hm</div>
-          </div>
-          <div style="flex:none; text-align:right;">
-            <div class="num" style="font-size:15px; font-weight:800;">4:08</div>
-            <div style="margin-top:4px; display:inline-flex; align-items:center; gap:4px; font-size:10px; font-weight:800; color:#c9ccd4; background:rgba(201,204,212,.16); border:1px solid #c9ccd455; padding:1px 6px; border-radius:6px;"><svg width="9" height="9" viewBox="0 0 24 24" fill="#c9ccd4" stroke="none"><circle cx="12" cy="9" r="6"/><path d="M8 14 L6 22 L12 19 L18 22 L16 14 Z"/></svg>2e PR</div>
-          </div>
-        </div>
-        <div style="display:flex; align-items:center; gap:12px; padding:12px 0; border-top:1px solid rgba(191,205,224,.08);">
-          <div style="flex:1; min-width:0;">
-            <div style="font-size:14px; font-weight:600; color:#FEFCFD; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Wagemanskeel Climb</div>
-            <div style="font-size:11px; color:#8f8aa3; margin-top:3px;">0.5 km &middot; 13 hm</div>
-          </div>
-          <div style="flex:none; text-align:right;">
-            <div class="num" style="font-size:15px; font-weight:800;">1:15</div>
-            <div style="margin-top:4px; display:inline-flex; align-items:center; gap:4px; font-size:10px; font-weight:800; color:#cd8b5a; background:rgba(205,139,90,.16); border:1px solid #cd8b5a55; padding:1px 6px; border-radius:6px;"><svg width="9" height="9" viewBox="0 0 24 24" fill="#cd8b5a" stroke="none"><circle cx="12" cy="9" r="6"/><path d="M8 14 L6 22 L12 19 L18 22 L16 14 Z"/></svg>3e PR</div>
-          </div>
-        </div>
-        <div style="margin-top:12px; text-align:center;"><span style="display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:#BFCDE0;">Alle 14 PR's<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#BFCDE0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></div>
+        <div style="margin-top:14px; text-align:center;"><span style="display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:#BFCDE0;">Nog 11 PR's<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#BFCDE0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></div>
       </div>
-      <div class="card" style="padding:16px 18px; margin-top:14px;">
+      <div class="card" style="padding:16px 18px; margin-top:20px;">
         <div class="lbl" style="margin-bottom:14px;">Snelste splits &middot; deze rit</div>
         <div style="display:flex; gap:10px;">
           <div style="flex:1;"><div class="num" style="font-weight:800; font-size:20px; line-height:1;">18:27</div><div style="color:#8f8aa3; font-size:11px; text-transform:uppercase; letter-spacing:.04em; margin-top:6px;">10 km</div></div>
@@ -130,7 +111,7 @@
           <div style="flex:1;"><div class="num" style="font-weight:800; font-size:20px; line-height:1;">1:27:35</div><div style="color:#8f8aa3; font-size:11px; text-transform:uppercase; letter-spacing:.04em; margin-top:6px;">40 km</div></div>
         </div>
       </div>
-      <div class="card" style="padding:16px 18px; margin-top:14px;">
+      <div class="card" style="padding:16px 18px; margin-top:20px;">
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
           <span class="lbl">Materiaal</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8f8aa3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
