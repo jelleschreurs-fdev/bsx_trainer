@@ -40,3 +40,6 @@ vul in, en link 'm vanuit `README.md`/`CHANGELOG.md` waar relevant.
 | [0009](0009-pull-to-refresh-sync.md) | Pull-to-refresh triggert verse sync | Aanvaard |
 | [0010](0010-locatieherkenning.md) | Locatieherkenning via geocoding | Aanvaard |
 | [0011](0011-zonebasis-hartslag-primair.md) | Zonebasis: hartslag primair, vermogen als 2e lens | Aanvaard |
+| [0012](0012-ritdetail-categorie-tabs.md) | Rit-detail als conditionele categorie-tabs | Aanvaard |
+| [0013](0013-beleving-rpe-geschat-aanpasbaar.md) | Beleving (RPE): app-geschat, aanpasbaar | Aanvaard |
+| [0014](0014-voeding-log-en-advies.md) | Voeding: loggen + berekend advies, weer-bewust | Aanvaard |

@@ -35,13 +35,17 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
 
 - **Ontwerp-canvas** (`design/`): high-fidelity artboards (`.dc.html` + `canvas.json`)
   voor Jij, Plannen, Trainingslog en het rit-detail, gepubliceerd als Artifact.
-- **Rit-detail als categorieën**: het detailscherm is opgesplitst in swipebare
-  categorieën (Overzicht · AI-analyse · Intensiteit · Vermogen) met een icon+label
-  segment-nav i.p.v. één lange scroll. Overzicht bevat kerncijfers, hoogteprofiel,
-  "Onderdeel van" (event) en materiaal; een aparte "Route"-tab volgt zodra er
-  route-vergelijking/segmenten/PR's zijn. AI-analyse als tweede tab, met sterkste
-  punt als hero-blok bovenaan en Sterk/Let op/Bijsturing als kleur-gecodeerde items.
-  Scrollbars verborgen (mobiel-first). "Beleving" (effort) in dezelfde gezoneerde stijl
+- **Rit-detail als conditionele categorie-tabs** (ADR 0012): icon+label segment-nav
+  i.p.v. één lange scroll. **Overzicht** is een dashboard (kerncijfers + preview-
+  rijen die naar elke tab doorlinken + Beleving + hoogteprofiel). **AI-analyse**
+  met sterkste punt als hero en Sterk/Let op/Bijsturing als kleur-gecodeerde items.
+  **Intensiteit** (HR + zones). De **Vermogen/Route**-slot is conditioneel: Vermogen
+  bij power (Zwift), Route bij buitenritten met segmenten. **Route** toont een
+  geannoteerd hoogteprofiel (km-as + klim-markers), enkel de top-3-PR-segmenten
+  (Strava 1e/2e/3e) en snelste splits. **Voeding** (universele tab): log van
+  gels/drank/supplementen per merk + berekend advies (doel vs. inname) — ADR 0014.
+  Beleving-score is HR-geschat en versleepbaar (ADR 0013). Scrollbars verborgen
+  (mobiel-first); load-chip in de subtiele chrome-stijl, rechts uitgelijnd. "Beleving" (effort) in dezelfde gezoneerde stijl
   als de Vorm-balk; actieve zone springt uit. "Beste inspanningen" tonen expliciet
   de pieken ván die rit (groen, t.o.v. gem.). ADR 0011.
 - ADR 0011: zonebasis = hartslag primair, vermogen als tweede lens via een
