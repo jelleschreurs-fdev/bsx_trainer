@@ -51,8 +51,11 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
 - ADR 0011: zonebasis = hartslag primair, vermogen als tweede lens via een
   HR/Vermogen-toggle in de zone-kaart; loop gebruikt run-HR-zones.
 - **Multi-sport rit-detail** (ADR 0015): dezelfde categorie-structuur voor loop/
-  wandel/fiets; de sport bepaalt tabs en metrics. Loop-voorbeeld toegevoegd (geen
-  Vermogen-tab, tempo + cadans, splits per km, HR/Tempo-toggle als tweede lens).
+  wandel/fiets/zwem; de sport bepaalt tabs en metrics. Loop-voorbeeld (geen
+  Vermogen-tab, tempo + cadans, splits per km, HR/Tempo-toggle) en zwem-voorbeeld
+  (Techniek-tab met SWOLF/slaglengte/slagritme, tempo per 100 m, splits per 100 m)
+  toegevoegd. Triatlon/duatlon als samengesteld race-overzicht is beschreven en nog
+  te ontwerpen.
 
 ### Changed
 - Load-bron voor v0 = Strava Relative Effort i.p.v. zelf-berekende Edwards-TRIMP.
