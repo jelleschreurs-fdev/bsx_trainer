@@ -36,9 +36,12 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
 - **Ontwerp-canvas** (`design/`): high-fidelity artboards (`.dc.html` + `canvas.json`)
   voor Jij, Plannen, Trainingslog en het rit-detail, gepubliceerd als Artifact.
 - **Rit-detail als categorieën**: het detailscherm is opgesplitst in swipebare
-  categorieën (Overzicht · AI-analyse · Intensiteit · Vermogen) met een segment-nav
-  i.p.v. één lange scroll. AI-analyse als tweede tab, met sterkste punt bovenaan en
-  Sterk/Let op/Bijsturing eronder. "Beleving" (effort) in dezelfde gezoneerde stijl
+  categorieën (Overzicht · AI-analyse · Intensiteit · Vermogen) met een icon+label
+  segment-nav i.p.v. één lange scroll. Overzicht bevat kerncijfers, hoogteprofiel,
+  "Onderdeel van" (event) en materiaal; een aparte "Route"-tab volgt zodra er
+  route-vergelijking/segmenten/PR's zijn. AI-analyse als tweede tab, met sterkste
+  punt als hero-blok bovenaan en Sterk/Let op/Bijsturing als kleur-gecodeerde items.
+  Scrollbars verborgen (mobiel-first). "Beleving" (effort) in dezelfde gezoneerde stijl
   als de Vorm-balk; actieve zone springt uit. "Beste inspanningen" tonen expliciet
   de pieken ván die rit (groen, t.o.v. gem.). ADR 0011.
 - ADR 0011: zonebasis = hartslag primair, vermogen als tweede lens via een
