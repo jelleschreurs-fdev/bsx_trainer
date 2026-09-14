@@ -1,7 +1,7 @@
 # 0001. Geen settings-UI: config in code
 
 - **Datum:** 2026-09-09
-- **Status:** Aanvaard
+- **Status:** Aanvaard — geamendeerd door [0016](0016-profiel-beheerde-data.md)
 
 ## Context
 

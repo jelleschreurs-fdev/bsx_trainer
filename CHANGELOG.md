@@ -57,6 +57,13 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
   toegevoegd. Triatlon/duatlon uitgewerkt als samengesteld race-overzicht:
   totaaltijd + tijdverdeling, de keten (zwem/T1/fiets/T2/loop) met doorklikbare
   onderdelen en wissels als eigen segmenten.
+- **Plannen uitgebreid**: weerblok op de rit-kaart (temp/wind/neerslag + waarschuwing
+  bij hitte, met seintje-belofte) en een voedingsvoorstel (ter info, dismissbaar,
+  op basis van duur/weer/voorkeursmerken). ADR 0014.
+- **Profiel/instellingen-scherm** (ADR 0016, amendeert 0001): uitrusting beheren
+  (fietsen/schoenen + toevoegen), drempels & zones (HR/FTP/lactaat/bikefit),
+  voorkeursmerken voeding, doel, en gekoppelde bronnen (Strava; HRV/slaap koppelen).
+  Model-constanten blijven in config; gebruiker-beheerde data verhuist hierheen.
 
 ### Changed
 - Load-bron voor v0 = Strava Relative Effort i.p.v. zelf-berekende Edwards-TRIMP.

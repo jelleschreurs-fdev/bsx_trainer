@@ -1,7 +1,7 @@
 {
   "artboards": [
     { "file": "Main.dc.html", "x": 0, "y": 0, "w": 390, "h": 1080 },
-    { "file": "Plannen.dc.html", "x": 490, "y": 0, "w": 390, "h": 980 },
+    { "file": "Plannen.dc.html", "x": 490, "y": 0, "w": 390, "h": 1380 },
     { "file": "Geschiedenis.dc.html", "x": 980, "y": 0, "w": 390, "h": 800 },
     { "file": "RitOverzicht.dc.html", "x": 1470, "y": 0, "w": 390, "h": 1310, "title": "Rit · Overzicht" },
     { "file": "RitAI.dc.html", "x": 1960, "y": 0, "w": 390, "h": 700, "title": "Rit · AI-analyse" },
@@ -12,7 +12,8 @@
     { "file": "RunOverzicht.dc.html", "x": 4410, "y": 0, "w": 390, "h": 1120, "title": "Loop · Overzicht" },
     { "file": "RunIntensiteit.dc.html", "x": 4900, "y": 0, "w": 390, "h": 1000, "title": "Loop · Intensiteit" },
     { "file": "SwimTechniek.dc.html", "x": 5390, "y": 0, "w": 390, "h": 1000, "title": "Zwem · Techniek" },
-    { "file": "TriOverzicht.dc.html", "x": 5880, "y": 0, "w": 390, "h": 1120, "title": "Triatlon · Race-overzicht" }
+    { "file": "TriOverzicht.dc.html", "x": 5880, "y": 0, "w": 390, "h": 1120, "title": "Triatlon · Race-overzicht" },
+    { "file": "Profiel.dc.html", "x": 6370, "y": 0, "w": 390, "h": 1560, "title": "Profiel & instellingen" }
   ],
   "launch": {
     "view": "canvas"
