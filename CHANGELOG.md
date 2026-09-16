@@ -14,15 +14,19 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
   glas-paneel. Kleur-hero's krijgen een merk-grading (indigo/staalblauw over de
   schaduwen, deels ontzadigd) zodat een warme foto de donkere stijl en tinten
   van de rest overneemt. Home + rit-detail als voorbeeld.
-- **Mono-variant** (derde design-richting): een strakkere, editorial premium-stijl
-  op basis van de donkere B&W-fietsfoto's — full-bleed grayscale-hero, groot
-  Apotek-headline, hairline-scheidingen en pure type-metrics (géén glas-panelen,
-  géén statuskleuren; strikt monochroom als onderscheidend register). Home +
-  rit-detail als voorbeeld.
+- **Mono-variant** (derde design-richting): dezelfde rijke concepten en glas-
+  panelen als Beleving, maar met een B&W grayscale-hero en een koel, monochroom
+  accent (staalblauw i.p.v. amber). Premium-monochroom als onderscheidend
+  register, zónder de functionele inhoud te verliezen. Home + rit-detail.
+- **Minimaal-variant (v4)**: een gestripte, editorial richting — full-bleed
+  grayscale-hero, groot Apotek-headline, hairline-scheidingen en pure
+  type-metrics, geen glas-panelen. Als aparte, simpele stijl-optie.
 - **Standaard beeld-assets** in `design/photos/`: de app krijgt een vaste set
   fietsfoto's die met de repo meekomen (voorkeur voor de donkere/B&W-stijl);
-  kleur mag, mits gegradeerd naar het merk. Hero's worden CSP-veilig als
-  `data:`-URI ingebed (via Chromium-resize), zodat ze zelfstandig renderen.
+  kleur mag, mits gegradeerd naar het merk.
+- Foto-hero's gebruiken nu het beeld-mechanisme van de canvas zelf
+  (`<img src="naam.jpg">` naar een geseede files-entry) i.p.v. inline
+  `data:`-achtergronden — die laatste rendert de canvas-runtime niet.
 - `docs/ROADMAP.md`: gefaseerde implementatie-roadmap (design-tokens → home →
   rit-detail → plannen → profiel → data-diepte → AI → readiness), gekoppeld aan
   de ADR's. Startpunt voor de bouwsessies.

@@ -17,7 +17,9 @@
     { "file": "BelevingHome.dc.html", "x": 0, "y": 1760, "w": 390, "h": 860, "title": "Beleving-variant · Home" },
     { "file": "BelevingRit.dc.html", "x": 490, "y": 1760, "w": 390, "h": 860, "title": "Beleving-variant · Rit" },
     { "file": "MonoHome.dc.html", "x": 980, "y": 1760, "w": 390, "h": 860, "title": "Mono-variant · Home" },
-    { "file": "MonoRit.dc.html", "x": 1470, "y": 1760, "w": 390, "h": 860, "title": "Mono-variant · Rit" }
+    { "file": "MonoRit.dc.html", "x": 1470, "y": 1760, "w": 390, "h": 860, "title": "Mono-variant · Rit" },
+    { "file": "MinimaalHome.dc.html", "x": 1960, "y": 1760, "w": 390, "h": 860, "title": "Minimaal-variant (v4) · Home" },
+    { "file": "MinimaalRit.dc.html", "x": 2450, "y": 1760, "w": 390, "h": 860, "title": "Minimaal-variant (v4) · Rit" }
   ],
   "launch": {
     "view": "canvas"
