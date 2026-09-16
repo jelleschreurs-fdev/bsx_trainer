@@ -8,6 +8,11 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
 ## [Unreleased]
 
 ### Added
+- **Beleving-variant** (design-exploratie, naast het bestaande ontwerp): een
+  belevings-gedreven layout met een groot foto-hero (duotone placeholder in
+  merkkleuren), tekst eroverheen die de persoon direct aanspreekt, en de info
+  onderaan in een glas-paneel. Zelfde branding, layout-inspiratie uit
+  foto-gedreven fitness-apps. Home + rit-detail als voorbeeld.
 - `docs/ROADMAP.md`: gefaseerde implementatie-roadmap (design-tokens → home →
   rit-detail → plannen → profiel → data-diepte → AI → readiness), gekoppeld aan
   de ADR's. Startpunt voor de bouwsessies.

@@ -13,7 +13,9 @@
     { "file": "RunIntensiteit.dc.html", "x": 4900, "y": 0, "w": 390, "h": 1000, "title": "Loop · Intensiteit" },
     { "file": "SwimTechniek.dc.html", "x": 5390, "y": 0, "w": 390, "h": 1000, "title": "Zwem · Techniek" },
     { "file": "TriOverzicht.dc.html", "x": 5880, "y": 0, "w": 390, "h": 1120, "title": "Triatlon · Race-overzicht" },
-    { "file": "Profiel.dc.html", "x": 6370, "y": 0, "w": 390, "h": 1560, "title": "Profiel & instellingen" }
+    { "file": "Profiel.dc.html", "x": 6370, "y": 0, "w": 390, "h": 1560, "title": "Profiel & instellingen" },
+    { "file": "BelevingHome.dc.html", "x": 0, "y": 1760, "w": 390, "h": 860, "title": "Beleving-variant · Home" },
+    { "file": "BelevingRit.dc.html", "x": 490, "y": 1760, "w": 390, "h": 860, "title": "Beleving-variant · Rit" }
   ],
   "launch": {
     "view": "canvas"
