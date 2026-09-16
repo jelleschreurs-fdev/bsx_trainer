@@ -8,6 +8,9 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
 ## [Unreleased]
 
 ### Added
+- `docs/ROADMAP.md`: gefaseerde implementatie-roadmap (design-tokens → home →
+  rit-detail → plannen → profiel → data-diepte → AI → readiness), gekoppeld aan
+  de ADR's. Startpunt voor de bouwsessies.
 - `src/config.ts`: enige waarheidsbron voor atleet- en modelparameters (HR-zones,
   gewicht, PMC-knoppen), met seams voor lactaatdrempels en vermogen.
 - Documentatie-structuur: `README.md`, `CHANGELOG.md` en `docs/decisions/` (ADR's).

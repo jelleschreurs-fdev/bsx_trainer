@@ -1,7 +1,9 @@
 # 0001. Geen settings-UI: config in code
 
 - **Datum:** 2026-09-09
-- **Status:** Aanvaard — geamendeerd door [0016](0016-profiel-beheerde-data.md)
+- **Status:** Aanvaard en van kracht — nu file-/config-gebaseerd, geen settings-UI.
+  [0016](0016-profiel-beheerde-data.md) legt een *richting* vast (Profiel-scherm
+  voor beheerde data) die nog niet geïmplementeerd is en gaandeweg kan wijzigen.
 
 ## Context
 

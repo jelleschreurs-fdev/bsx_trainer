@@ -29,7 +29,7 @@ vul in, en link 'm vanuit `README.md`/`CHANGELOG.md` waar relevant.
 
 | Nr | Titel | Status |
 |----|-------|--------|
-| [0001](0001-geen-settings-ui.md) | Geen settings-UI: config in code | Aanvaard (geamendeerd door 0016) |
+| [0001](0001-geen-settings-ui.md) | Geen settings-UI: config in code | Aanvaard en van kracht (richting 0016) |
 | [0002](0002-edwards-zone-trimp.md) | Edwards zone-TRIMP als load-model | Aanvaard |
 | [0003](0003-whatsapp-geen-autosync.md) | WhatsApp: geen auto-sync, paste-to-parse | Aanvaard |
 | [0004](0004-serverless-backend-voor-strava-secret.md) | Serverless backend voor Strava-secret | Aanvaard |
@@ -44,4 +44,4 @@ vul in, en link 'm vanuit `README.md`/`CHANGELOG.md` waar relevant.
 | [0013](0013-beleving-rpe-geschat-aanpasbaar.md) | Beleving (RPE): app-geschat, aanpasbaar | Aanvaard |
 | [0014](0014-voeding-log-en-advies.md) | Voeding: loggen + berekend advies, weer-bewust | Aanvaard |
 | [0015](0015-multisport-ritdetail.md) | Multi-sport rit-detail: sport bepaalt tabs/metrics | Aanvaard |
-| [0016](0016-profiel-beheerde-data.md) | Profiel-scherm voor gebruiker-beheerde data | Aanvaard (amendeert 0001) |
+| [0016](0016-profiel-beheerde-data.md) | Profiel-scherm voor gebruiker-beheerde data | Richting, nog niet geïmplementeerd |

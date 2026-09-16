@@ -1,7 +1,16 @@
 # 0016. Profiel-scherm voor gebruiker-beheerde data (amendeert 0001)
 
 - **Datum:** 2026-09-14
-- **Status:** Aanvaard (amendeert 0001)
+- **Status:** Aanvaard als richting — nog niet geïmplementeerd (amendeert 0001)
+
+## Huidige staat vs. richting
+
+Belangrijk onderscheid: **vandaag blijft alles file-/config-gebaseerd zonder
+settings-UI** — ADR 0001 is in de code onverkort van kracht. Deze ADR legt de
+**richting** vast (een Profiel-scherm met persistente, gebruiker-beheerde data),
+die pas landt bij implementatie (roadmap fase 4). Tot dan verandert er niets aan
+de werkende app. De invulling kan gaandeweg de ontwikkeling nog verschuiven; deze
+ADR wordt dan bijgewerkt of vervangen.
 
 ## Context
 
