@@ -15,7 +15,9 @@
     { "file": "TriOverzicht.dc.html", "x": 5880, "y": 0, "w": 390, "h": 1120, "title": "Triatlon · Race-overzicht" },
     { "file": "Profiel.dc.html", "x": 6370, "y": 0, "w": 390, "h": 1560, "title": "Profiel & instellingen" },
     { "file": "BelevingHome.dc.html", "x": 0, "y": 1760, "w": 390, "h": 860, "title": "Beleving-variant · Home" },
-    { "file": "BelevingRit.dc.html", "x": 490, "y": 1760, "w": 390, "h": 860, "title": "Beleving-variant · Rit" }
+    { "file": "BelevingRit.dc.html", "x": 490, "y": 1760, "w": 390, "h": 860, "title": "Beleving-variant · Rit" },
+    { "file": "MonoHome.dc.html", "x": 980, "y": 1760, "w": 390, "h": 860, "title": "Mono-variant · Home" },
+    { "file": "MonoRit.dc.html", "x": 1470, "y": 1760, "w": 390, "h": 860, "title": "Mono-variant · Rit" }
   ],
   "launch": {
     "view": "canvas"

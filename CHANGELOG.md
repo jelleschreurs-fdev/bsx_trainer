@@ -9,10 +9,20 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
 
 ### Added
 - **Beleving-variant** (design-exploratie, naast het bestaande ontwerp): een
-  belevings-gedreven layout met een groot foto-hero (duotone placeholder in
-  merkkleuren), tekst eroverheen die de persoon direct aanspreekt, en de info
-  onderaan in een glas-paneel. Zelfde branding, layout-inspiratie uit
-  foto-gedreven fitness-apps. Home + rit-detail als voorbeeld.
+  belevings-gedreven layout met een groot foto-hero (echte fietsfoto's), tekst
+  eroverheen die de persoon direct aanspreekt, en de info onderaan in een
+  glas-paneel. Kleur-hero's krijgen een merk-grading (indigo/staalblauw over de
+  schaduwen, deels ontzadigd) zodat een warme foto de donkere stijl en tinten
+  van de rest overneemt. Home + rit-detail als voorbeeld.
+- **Mono-variant** (derde design-richting): een strakkere, editorial premium-stijl
+  op basis van de donkere B&W-fietsfoto's — full-bleed grayscale-hero, groot
+  Apotek-headline, hairline-scheidingen en pure type-metrics (géén glas-panelen,
+  géén statuskleuren; strikt monochroom als onderscheidend register). Home +
+  rit-detail als voorbeeld.
+- **Standaard beeld-assets** in `design/photos/`: de app krijgt een vaste set
+  fietsfoto's die met de repo meekomen (voorkeur voor de donkere/B&W-stijl);
+  kleur mag, mits gegradeerd naar het merk. Hero's worden CSP-veilig als
+  `data:`-URI ingebed (via Chromium-resize), zodat ze zelfstandig renderen.
 - `docs/ROADMAP.md`: gefaseerde implementatie-roadmap (design-tokens → home →
   rit-detail → plannen → profiel → data-diepte → AI → readiness), gekoppeld aan
   de ADR's. Startpunt voor de bouwsessies.
