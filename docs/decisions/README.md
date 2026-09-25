@@ -45,3 +45,5 @@ vul in, en link 'm vanuit `README.md`/`CHANGELOG.md` waar relevant.
 | [0014](0014-voeding-log-en-advies.md) | Voeding: loggen + berekend advies, weer-bewust | Aanvaard |
 | [0015](0015-multisport-ritdetail.md) | Multi-sport rit-detail: sport bepaalt tabs/metrics | Aanvaard |
 | [0016](0016-profiel-beheerde-data.md) | Profiel-scherm voor gebruiker-beheerde data | Richting, nog niet geïmplementeerd |
+| [0017](0017-dagvoeding-ai-en-coach-export.md) | Dagvoeding, AI-suggesties en coach/arts-export | Richting, nog niet geïmplementeerd |
+| [0018](0018-adaptief-stappendoel.md) | Adaptief stappendoel (niet-prominent) | Richting, nog niet geïmplementeerd |

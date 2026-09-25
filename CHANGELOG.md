@@ -23,6 +23,18 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
 - **Minimaal-variant (v4)**: een gestripte, editorial richting — full-bleed
   grayscale-hero, groot Apotek-headline, hairline-scheidingen en pure
   type-metrics, geen glas-panelen. Als aparte, simpele stijl-optie.
+- **Mono doorgetrokken**: rit-detail-tabs (Overzicht, AI-analyse, Intensiteit,
+  Vermogen, Voeding, Route) met gedeelde tab-navigatie, plus Profiel — één
+  samenhangend systeem in de Mono-stijl.
+- **Dagvoeding-scherm** (ADR 0017): energiebalans (inname vs. verbruik) met
+  context-bewust oordeel, macro's vs. doel, maaltijden, en een **AI-suggestie**
+  voor de volgende maaltijd op basis van het resterende budget én wat je al at /
+  lekker vindt.
+- **Coach/arts-deeloverzicht** (ADR 0017): compact, verzendbaar (PDF/link)
+  overzicht van belasting, voeding, activiteit en aandachtspunten + notitie;
+  deelt standaard alleen de samenvatting.
+- **Adaptief stappendoel** (ADR 0018): niet-prominent, instelbaar dagdoel dat met
+  +5% groeit bij gehaald en terugzakt bij missen; motivatie-notificatie onder 25%.
 - **Standaard beeld-assets** in `design/photos/`: de app krijgt een vaste set
   fietsfoto's die met de repo meekomen (voorkeur voor de donkere/B&W-stijl);
   kleur mag, mits gegradeerd naar het merk.
