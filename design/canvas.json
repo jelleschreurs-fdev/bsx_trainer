@@ -22,7 +22,13 @@
     { "file": "MinimaalRit.dc.html", "x": 2450, "y": 1760, "w": 390, "h": 860, "title": "Minimaal-variant (v4) · Rit" },
     { "file": "MonoIntensiteit.dc.html", "x": 980, "y": 2680, "w": 390, "h": 860, "title": "Mono-variant · Intensiteit" },
     { "file": "MonoPlannen.dc.html", "x": 1470, "y": 2680, "w": 390, "h": 860, "title": "Mono-variant · Plannen" },
-    { "file": "MonoLog.dc.html", "x": 1960, "y": 2680, "w": 390, "h": 860, "title": "Mono-variant · Trainingslog" }
+    { "file": "MonoLog.dc.html", "x": 1960, "y": 2680, "w": 390, "h": 860, "title": "Mono-variant · Trainingslog" },
+    { "file": "MonoRitOverzicht.dc.html", "x": 980, "y": 3600, "w": 390, "h": 860, "title": "Mono · Rit · Overzicht" },
+    { "file": "MonoRitAI.dc.html", "x": 1470, "y": 3600, "w": 390, "h": 860, "title": "Mono · Rit · AI-analyse" },
+    { "file": "MonoRitVermogen.dc.html", "x": 1960, "y": 3600, "w": 390, "h": 860, "title": "Mono · Rit · Vermogen" },
+    { "file": "MonoRitVoeding.dc.html", "x": 2450, "y": 3600, "w": 390, "h": 860, "title": "Mono · Rit · Voeding" },
+    { "file": "MonoRitRoute.dc.html", "x": 2940, "y": 3600, "w": 390, "h": 860, "title": "Mono · Rit · Route" },
+    { "file": "MonoProfiel.dc.html", "x": 3430, "y": 3600, "w": 390, "h": 860, "title": "Mono · Profiel" }
   ],
   "launch": {
     "view": "canvas"
