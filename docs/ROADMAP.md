@@ -29,18 +29,23 @@ de volgorde en de afhankelijkheden kloppen.
 
 ---
 
-## Fase 0 — Design-systeem & fundament
+## Fase 0 — Design-systeem & fundament  ✅ (grotendeels klaar)
 
 **Doel:** één tokenset waarop alles bouwt, zodat de code de canvas matcht.
-- Tokens uit het ontwerp naar CSS-variabelen + `tailwind.config` (palet
-  #000505/#3B3355/#5D5D81/#BFCDE0/#FEFCFD, statuskleuren groen/blauw/indigo/amber/
-  rood, zachte schaduwen, radius, de rijke radiale achtergrondlagen, scrollbars
-  verborgen). Apotek (@font-face, self-hosted) + Inter.
-- Herbruikbare primitives: `Card`, `SegmentNav` (icon+label, swipe + scroll-to-
-  active), `StatTile`, `ZoneBar`, `Chip`, `Slider` (sleepbare thumb), `SparkLine`/
-  `BarChart`, `SheetHeader`.
-- **Klaar als:** een storybook-achtige testpagina toont de primitives in licht/
-  donker, pixel-dicht bij de canvas. Verwijst naar ADR 0008.
+- ✅ Tokens naar CSS-variabelen (`src/design/tokens.css`) + JS-spiegel
+  (`src/design/tokens.ts`): palet #000505/#3B3355/#5D5D81/#BFCDE0/#FEFCFD,
+  zone-/statuskleuren (Z1 staal · Z2 blauw · Z3 groen · Z4 amber · Z5 rood),
+  neutrale glas-oppervlakken, hairlines, radius, schaduw, spacing. Apotek
+  (@font-face) + Inter. Geen Tailwind — plain CSS, in lijn met de bestaande app.
+- ✅ Primitives (`src/design/primitives.tsx`): `Card`, `Label`, `Hairline`,
+  `Chip`, `StatTile`/`StatRow`, `SegmentNav`, `ZoneBar`, `ProgressBar`, `Ring`,
+  `BarChart`, `SparkLine`, `EffortTrack`, `SheetHeader`. Principe: kleur is een
+  expliciete prop (data), nooit default (shell blijft monochroom).
+- ✅ Showcase-testpagina (`src/design/Showcase.tsx`, via `#showcase`) toont alle
+  primitives met voorbeelddata — pixel-dicht bij de canvas. Verwijst naar ADR 0008.
+- Rest (later, bij de schermen): interactieve `Slider` (sleepbare effort-thumb),
+  swipe/scroll-to-active op `SegmentNav`. De app is dark-primary; een light-modus
+  is geen doel.
 
 ## Fase 1 — Home "Jij" op ontwerp-niveau
 

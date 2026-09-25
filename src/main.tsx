@@ -1,11 +1,15 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
+import Showcase from "./design/Showcase";
 import "./styles.css";
+
+// #showcase toont de fase-0 design-systeem-testpagina; anders de app.
+const Root = window.location.hash === "#showcase" ? Showcase : App;
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <Root />
   </StrictMode>,
 );
 

@@ -8,6 +8,14 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
 ## [Unreleased]
 
 ### Added
+- **Fase 0 — design-systeem in code**: Mono-tokens als CSS-variabelen
+  (`src/design/tokens.css`) + JS-spiegel (`tokens.ts`), herbruikbare primitives
+  (`primitives.tsx`: Card, Chip, StatRow, SegmentNav, ZoneBar, ProgressBar, Ring,
+  BarChart, SparkLine, EffortTrack, SheetHeader) en een showcase-testpagina
+  (`Showcase.tsx`, via `#showcase`). Kleur is een expliciete data-prop; de shell
+  blijft monochroom. `npm run build` groen.
+- **Canvas opgeruimd** tot alleen het Mono-systeem (17 schermen); de pre-Mono
+  artboards en de Beleving-/Minimaal-varianten zijn verwijderd.
 - **Beleving-variant** (design-exploratie, naast het bestaande ontwerp): een
   belevings-gedreven layout met een groot foto-hero (echte fietsfoto's), tekst
   eroverheen die de persoon direct aanspreekt, en de info onderaan in een

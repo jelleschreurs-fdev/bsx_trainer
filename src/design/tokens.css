@@ -1,0 +1,86 @@
+/* ── BSX Trainer · Mono design tokens ───────────────────────────────────
+   Het Mono-systeem: monochrome ondergrond (near-black + neutrale grijs/glas
+   oppervlakken), en KLEUR uitsluitend als signaal op betekenisvolle data
+   (readiness, HR-zones, load, macro's). Chrome (nav, chips, tekst) blijft
+   monochroom. Zie ADR 0008 (visuele identiteit) + de design-canvas.
+
+   Deze laag is de bron van waarheid voor de gebouwde app. `tokens.ts` is de
+   JS-spiegel voor plekken die de waarden in code nodig hebben (SVG-charts). */
+
+:root {
+  /* ground + tekst */
+  --bg: #000505;
+  --text: #fefcfd;   /* primair */
+  --text-2: #bfcde0; /* secundair (staalblauw) */
+  --text-3: #8f8aa3; /* muted */
+  --text-4: #6c6880; /* faint / inactief */
+
+  /* neutrale oppervlakken (Mono-glas) — géén kleur-tint */
+  --surface-1: rgba(24, 24, 32, 0.90); /* glas top */
+  --surface-2: rgba(9, 9, 15, 0.95);   /* glas onder */
+  --surface-flat: rgba(191, 205, 224, 0.05);
+  --surface-flat-2: rgba(191, 205, 224, 0.08);
+  --hairline: rgba(191, 205, 224, 0.10);
+  --hairline-strong: rgba(191, 205, 224, 0.16);
+  --border-card: rgba(191, 205, 224, 0.12);
+  --track: rgba(143, 138, 163, 0.25); /* lege balk-achtergrond */
+
+  /* merk-accenten — chrome, niet-data */
+  --indigo: #3b3355;
+  --grape: #5d5d81;
+  --sky: #bfcde0;
+
+  /* zone- / statuskleuren — ALLEEN op data */
+  --z1: #7f9cc9; /* herstel / staal */
+  --z2: #6aa6ff; /* duur / blauw */
+  --z3: #6fcf97; /* tempo / groen */
+  --z4: #f2b45e; /* drempel / amber */
+  --z5: #e5736f; /* VO2 / rood */
+  /* semantische aliassen */
+  --good: var(--z3);
+  --info: var(--z2);
+  --warn: var(--z4);
+  --bad: var(--z5);
+  --calm: var(--z1);
+
+  /* radius */
+  --r-xl: 26px;
+  --r-lg: 22px;
+  --r-md: 16px;
+  --r-sm: 12px;
+  --r-pill: 999px;
+
+  /* schaduw */
+  --shadow-card: 0 18px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --shadow-sheet: 0 -20px 48px rgba(0, 0, 0, 0.5);
+
+  /* spacing-schaal */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 22px;
+  --sp-6: 30px;
+
+  /* typografie */
+  --sans: "Inter", -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+  --display: "apotek", var(--sans);
+}
+
+/* primitives-scope: alles onder .bsx erft de mono-basis */
+.bsx {
+  color: var(--text);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+.bsx *,
+.bsx *::before,
+.bsx *::after { box-sizing: border-box; }
+
+/* numerieke waarden: tabular figures voor rustige uitlijning */
+.bsx .num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+.bsx .disp { font-family: var(--display); letter-spacing: -0.01em; }
+
+/* verborgen scrollbars (mobiel-first) */
+.bsx .noscroll { scrollbar-width: none; -ms-overflow-style: none; }
+.bsx .noscroll::-webkit-scrollbar { width: 0; height: 0; display: none; }
