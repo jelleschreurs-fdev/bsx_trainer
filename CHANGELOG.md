@@ -14,10 +14,12 @@ Commits volgen [Conventional Commits](https://www.conventionalcommits.org/).
   glas-paneel. Kleur-hero's krijgen een merk-grading (indigo/staalblauw over de
   schaduwen, deels ontzadigd) zodat een warme foto de donkere stijl en tinten
   van de rest overneemt. Home + rit-detail als voorbeeld.
-- **Mono-variant** (derde design-richting): dezelfde rijke concepten en glas-
-  panelen als Beleving, maar met een B&W grayscale-hero en een koel, monochroom
-  accent (staalblauw i.p.v. amber). Premium-monochroom als onderscheidend
-  register, zónder de functionele inhoud te verliezen. Home + rit-detail.
+- **Mono-variant** (derde design-richting): monochrome ondergrond (grayscale
+  foto's + strikt neutrale donkere shell) mét de vólle statuskleuren terug, maar
+  uitsluitend op betekenisvolle data — readiness-schaal, HR-zones (Z1 staal · Z2
+  blauw · Z3 groen · Z4 amber · Z5 rood), fitness en load-per-activiteit. Kleur
+  is signaal, geen decoratie: enkel wat telt springt eruit. Uitgebouwd tot een
+  samenhangende flow: Home, Rit, Intensiteit, Plannen en Trainingslog.
 - **Minimaal-variant (v4)**: een gestripte, editorial richting — full-bleed
   grayscale-hero, groot Apotek-headline, hairline-scheidingen en pure
   type-metrics, geen glas-panelen. Als aparte, simpele stijl-optie.
