@@ -27,20 +27,33 @@ behoefte aan een instelbaar dagdoel dat meebeweegt met de gewoonte.
   - **Duidelijke onderschrijding** (bv. 2.000 van 10.000), symmetrisch:
     - **1× deze week** → verlaag met **−5%**;
     - **vaker deze week** → verlaag met **tot −15%**.
-  - Dagen dicht bij het doel geven geen of een minimale aanpassing.
+  - **Drempels:** een dag telt als *duidelijke overschrijding* bij **≥ +50%**
+    boven het doel, en als *duidelijke onderschrijding* bij **≤ 50%** van het doel
+    gehaald. Dagen daar tussenin (dicht bij het doel) geven geen of een minimale
+    aanpassing.
   - **Grenzen:** een dagstap is max **±15%**; er geldt een instelbare **bodem**
     zodat het doel niet richting nul zakt. Drempels ("duidelijke" over-/
     onderschrijding), de 5%/15%-stappen en de bodem zijn parameters in config/
     profiel, geen hard-codes.
 
-- **Herijking van het basisdoel.** Wijkt het meebewegende doel `G` **≥75%** af
-  van het oorspronkelijke `G0`, dan stond dat basisdoel waarschijnlijk verkeerd:
-  - omlaag (`G ≤ 25% van G0`) → basisdoel stond te **hoog**;
-  - omhoog (`G ≥ 175% van G0`) → basisdoel stond te **laag**.
-  In beide gevallen tonen we een **voorstel** en vragen we: *nieuw doel overnemen
-  of huidige behouden?* — niets wordt automatisch overschreven. Het voorgestelde
-  doel ligt op **±35% van het huidige (gemiddelde) stappenaantal** (uitdagend maar
-  haalbaar; richting hangt af van of men structureel over- of onderpresteert).
+- **Anker en herijking.** De dagelijkse aanpassing beweegt `G`, maar meet altijd
+  tegen het huidige **anker** `G0` (bij de start = het handmatig ingestelde doel).
+  De ±75%-band rond `G0` (`0,25·G0` … `1,75·G0`) is de **rem tegen doorschieten**:
+  vóórdat compounding wegloopt, valt `G` tegen die grens en volgt een herijking.
+  - omlaag (`G ≤ 25% van G0`) → anker stond te **hoog**;
+  - omhoog (`G ≥ 175% van G0`) → anker stond te **laag**.
+  We tonen dan een **voorstel** en vragen: *nieuw doel overnemen of huidige
+  behouden?* — niets wordt automatisch overschreven.
+- **Het voorstel is verankerd aan de realiteit, niet aan compounding.** Het
+  voorgestelde doel wordt afgeleid van het **recente werkelijke stappengemiddelde**
+  (een milde uitdaging daaromheen, begrensd op **±35%** van dat gemiddelde), zodat
+  het altijd zinnig blijft. Dus: iemand met basis 10.000 die stelselmatig ~25.000
+  loopt krijgt een voorstel rond zijn werkelijke niveau (~22–25k), **nooit 50.000**
+  door percentages te blijven stapelen. Symmetrisch omlaag.
+- **Na akkoord wordt het voorstel het nieuwe anker `G0`.** Alle percentages
+  (dagstappen én de volgende ±75%-band) rekenen vanaf dat nieuwe anker. Het
+  oorspronkelijke doel blijft als referentie bewaard in de historie, maar stuurt
+  niet langer de aanpassing. Zo blijft het systeem stabiel in beide richtingen.
 
 - **Motivatie-notificatie:** zakt de realisatie op een dag **onder 25%** van het
   actuele doel, dan stuurt de app één bemoedigende notificatie — niet bestraffend,

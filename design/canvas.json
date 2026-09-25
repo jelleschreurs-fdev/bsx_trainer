@@ -30,7 +30,12 @@
     { "file": "MonoRitRoute.dc.html", "x": 2940, "y": 3600, "w": 390, "h": 860, "title": "Mono · Rit · Route" },
     { "file": "MonoProfiel.dc.html", "x": 3430, "y": 3600, "w": 390, "h": 860, "title": "Mono · Profiel" },
     { "file": "MonoVoedingDag.dc.html", "x": 980, "y": 4520, "w": 390, "h": 860, "title": "Mono · Voeding (dag) + AI + stappen" },
-    { "file": "MonoCoachDeel.dc.html", "x": 1470, "y": 4520, "w": 390, "h": 860, "title": "Mono · Delen met coach/arts" }
+    { "file": "MonoCoachDeel.dc.html", "x": 1470, "y": 4520, "w": 390, "h": 860, "title": "Mono · Delen met coach/arts" },
+    { "file": "MonoLoopOverzicht.dc.html", "x": 980, "y": 5440, "w": 390, "h": 860, "title": "Mono · Loop · Overzicht" },
+    { "file": "MonoLoopTempo.dc.html", "x": 1470, "y": 5440, "w": 390, "h": 860, "title": "Mono · Loop · Tempo (splits)" },
+    { "file": "MonoZwemOverzicht.dc.html", "x": 1960, "y": 5440, "w": 390, "h": 860, "title": "Mono · Zwem · Overzicht" },
+    { "file": "MonoZwemTechniek.dc.html", "x": 2450, "y": 5440, "w": 390, "h": 860, "title": "Mono · Zwem · Techniek" },
+    { "file": "MonoTriOverzicht.dc.html", "x": 2940, "y": 5440, "w": 390, "h": 860, "title": "Mono · Triatlon · Race-overzicht" }
   ],
   "launch": {
     "view": "canvas"
